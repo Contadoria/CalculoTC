@@ -1,6 +1,6 @@
 ## Planilha de cálculo de tempo de contribuição.
 
-Este repositório hospeda o site com a documentação da planilha *CalculoTC* desenvolvida em *Google Sheets* pela **Contadoria**, organização criada no *Github* para a desenvolvimento de ferramentas de cálculo de benefícios previdenciários.
+Este repositório hospeda o site com a documentação da planilha *CalculoTC* desenvolvida em *Google Sheets* pela **Contadoria**, organização criada no *Github* para o desenvolvimento de ferramentas de cálculo de benefícios previdenciários.
 
 ### Características da planilha
 

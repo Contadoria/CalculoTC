@@ -6,7 +6,7 @@ order: 3
 
 ##### **AnosAdicionados** `B:B`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 0
@@ -18,7 +18,6 @@ order: 3
 * * *
 
 ##### **AnosConvertidosTCAdicionado** `P:P`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(AnosConvertidosTCAdicionado)=1;"Anos conv.";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;ROUNDDOWN(TotalDiasConvertidosTCAdicionado/360);""))){% endhighlight %}
 
 
@@ -29,7 +28,7 @@ order: 3
 
 ##### **AnosTCAdicionado** `B:B`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 0
@@ -41,10 +40,9 @@ order: 3
 * * *
 
 ##### **AnosTCAdicionadoDemonstrativo** `E:E`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(AnosTCAdicionadoDemonstrativo)=1;"Anos";IF(AnosAdicionados+MesesAdicionados+DiasAdicionados;IF(AnosAdicionados="";0;AnosAdicionados);""))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0
 ~~~
@@ -55,7 +53,6 @@ order: 3
 * * *
 
 ##### **CarenciaTCAdicionado** `T:T`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(TotalDiasConvertidosTCAdicionado)=1;"Carência";IF(ISNUMBER(CarenciaTCAdicionadoModificada);CarenciaTCAdicionadoModificada; IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(ContarCarenciaTCAdicionado="Não";0;ROUNDUP(TotalDiasTCAdicionado/30));"")))){% endhighlight %}
 
 
@@ -66,7 +63,7 @@ order: 3
 
 ##### **CarenciaTCAdicionadoModificada** `U:U`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -78,12 +75,12 @@ order: 3
 
 ##### **ClassificacaoTCAdicionado** `K:K`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_RANGE TabelaConversao!A:A
 ~~~
@@ -94,12 +91,12 @@ VALUE_IN_RANGE TabelaConversao!A:A
 
 ##### **ContarCarenciaTCAdicionado** `S:S`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_LIST Sim,Não
 ~~~
@@ -110,7 +107,7 @@ VALUE_IN_LIST Sim,Não
 
 ##### **DiasAdicionados** `D:D`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 0
@@ -122,7 +119,6 @@ VALUE_IN_LIST Sim,Não
 * * *
 
 ##### **DiasConvertidosTCAdicionado** `R:R`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(DiasConvertidosTCAdicionado)=1;"Dias conv.";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;TotalDiasConvertidosTCAdicionado-(AnosConvertidosTCAdicionado*360)-(MesesConvertidosTCAdicionado*30);""))){% endhighlight %}
 
 
@@ -133,7 +129,7 @@ VALUE_IN_LIST Sim,Não
 
 ##### **DiasTCAdicionado** `D:D`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 0
@@ -145,10 +141,9 @@ VALUE_IN_LIST Sim,Não
 * * *
 
 ##### **DiasTCAdicionadoDemonstrativo** `G:G`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(DiasTCAdicionadoDemonstrativo)=1;"Dias";IF(AnosAdicionados+MesesAdicionados+DiasAdicionados;IF(DiasAdicionados="";0;DiasAdicionados);""))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0
 ~~~
@@ -159,10 +154,9 @@ VALUE_IN_LIST Sim,Não
 * * *
 
 ##### **FatorConversaoTCAdicionado** `M:M`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(FatorConversaoTCAdicionado)=1;"Fator";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(FatorConversaoTCAdicionadoModificado;FatorConversaoTCAdicionadoModificado;IF(ReferenciaFatorTCAdicionado="N";0;TCAposentadoriaIntegral/(IF(ReferenciaFatorTCAdicionado="V";{" ";ReferenciaFatorTCAdicionado};ReferenciaFatorTCAdicionado))));""))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 #,##0.00
 ~~~
@@ -174,7 +168,7 @@ VALUE_IN_LIST Sim,Não
 
 ##### **FatorConversaoTCAdicionadoModificado** `N:N`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -185,10 +179,9 @@ VALUE_IN_LIST Sim,Não
 * * *
 
 ##### **LimitesTCAdicionado** `H:H`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(LimitesTCAdicionado)=1;"Até...";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(LimitesTCAdicionadoModificado;LimitesTCAdicionadoModificado;DER-1);""))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -200,7 +193,7 @@ dd/MM/yyyy
 
 ##### **LimitesTCAdicionadoModificado** `I:I`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 dd/MM/yyyy
@@ -213,7 +206,7 @@ dd/MM/yyyy
 
 ##### **MesesAdicionados** `C:C`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 0
@@ -225,7 +218,6 @@ dd/MM/yyyy
 * * *
 
 ##### **MesesConvertidosTCAdicionado** `Q:Q`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(MesesConvertidosTCAdicionado)=1;"Meses conv.";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;ROUNDDOWN((TotalDiasConvertidosTCAdicionado-(AnosConvertidosTCAdicionado*360))/30);""))){% endhighlight %}
 
 
@@ -236,7 +228,7 @@ dd/MM/yyyy
 
 ##### **MesesTCAdicionado** `C:C`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 0
@@ -248,10 +240,9 @@ dd/MM/yyyy
 * * *
 
 ##### **MesesTCAdicionadoDemonstrativo** `F:F`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(MesesTCAdicionadoDemonstrativo)=1;"Meses";IF(AnosAdicionados+MesesAdicionados+DiasAdicionados;IF(MesesAdicionados="";0;MesesAdicionados);""))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0
 ~~~
@@ -263,12 +254,12 @@ dd/MM/yyyy
 
 ##### **MotivosTCAdicionado** `V:V`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_RANGE ListaMotivos!A:A
 ~~~
@@ -278,7 +269,6 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **MotivosTCAdicionadoDemonstrativo** `X:X`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(MotivosTCAdicionadoDemonstrativo)=1;"Motivos Demonstrativo";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(MotivosTCAdicionado="";" ";MID(MotivosTCAdicionado;5;100));""))){% endhighlight %}
 
 
@@ -289,7 +279,7 @@ VALUE_IN_RANGE ListaMotivos!A:A
 
 ##### **ObservacoesTCAdicionado** `W:W`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -300,7 +290,6 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **ObservacoesTCAdicionadoDemonstrativo** `Y:Y`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(ObservacoesTCAdicionadoDemonstrativo)=1;"Observacoes Demonstrativo";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(ObservacoesTCAdicionado="";"";"Seq. "&ROW(ObservacoesTCAdicionado)&". "&ObservacoesTCAdicionado);""))){% endhighlight %}
 
 
@@ -310,7 +299,6 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **ReferenciaFatorTCAdicionado** `L:L`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(ReferenciaFatorTCAdicionado)=1;"Referência";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(ClassificacaoTCAdicionado<>"";VLOOKUP(ClassificacaoTCAdicionado;TabelaConversao!A:B;IF(Sexo="Homem";2;3);FALSE);VLOOKUP("1 - Comum";TabelaConversao!A:B;IF(Sexo="Homem";2;3);FALSE));""))){% endhighlight %}
 
 
@@ -320,10 +308,9 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **SequenciaTCAdicionado** `A:A`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(SequenciaTCAdicionado)=1;"Seq";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;ROW(SequenciaTCAdicionado)-1;""))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0
 ~~~
@@ -334,7 +321,6 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **TotalDiasConvertidosTCAdicionado** `O:O`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(TotalDiasConvertidosTCAdicionado)=1;"Total conv.";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;TotalDiasTCAdicionado*FatorConversaoTCAdicionado;""))){% endhighlight %}
 
 
@@ -344,7 +330,6 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **TotalDiasTCAdicionado** `J:J`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(TotalDiasTCAdicionado)=1;"Total (dias)";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;(AnosTCAdicionadoDemonstrativo*360)+(MesesTCAdicionadoDemonstrativo*30)+DiasTCAdicionadoDemonstrativo;""))){% endhighlight %}
 
 

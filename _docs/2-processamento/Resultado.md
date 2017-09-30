@@ -5,10 +5,9 @@ order: 3
 ---
 
 ##### **AnosDER** `F10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN(E10/360){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -19,10 +18,9 @@ order: 3
 * * *
 
 ##### **AnosDERReafirmada1** `F11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(E11);ROUNDDOWN(E11/360);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -33,10 +31,9 @@ order: 3
 * * *
 
 ##### **AnosDERReafirmada2** `F12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(E12);ROUNDDOWN(E12/360);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -47,10 +44,9 @@ order: 3
 * * *
 
 ##### **AnosDPE** `F5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN(E5/360){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -61,10 +57,9 @@ order: 3
 * * *
 
 ##### **AnosDPL** `F9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN(E9/360){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -75,10 +70,9 @@ order: 3
 * * *
 
 ##### **AnosFaltantesComPedagio** `F7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN(E7/360){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -89,10 +83,9 @@ order: 3
 * * *
 
 ##### **AnosPedagio** `F6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN(E6/360){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -103,10 +96,9 @@ order: 3
 * * *
 
 ##### **AnosTCMinimo** `F8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN(E8/360){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -117,10 +109,9 @@ order: 3
 * * *
 
 ##### **BeneficioIntegralDER** `M10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TotalDiasDER>=TCAposentadoriaIntegral*360{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -131,10 +122,9 @@ order: 3
 * * *
 
 ##### **BeneficioIntegralDERReafirmada1** `M11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TotalDiasDERReafirmada1>=TCAposentadoriaIntegral*360{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -145,10 +135,9 @@ order: 3
 * * *
 
 ##### **BeneficioIntegralDERReafirmada2** `M12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TotalDiasDERReafirmada2>=TCAposentadoriaIntegral*360{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -159,10 +148,9 @@ order: 3
 * * *
 
 ##### **BeneficioIntegralDPE** `M5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TotalDiasDPE>=TCAposentadoriaIntegral*360{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -173,10 +161,9 @@ order: 3
 * * *
 
 ##### **BeneficioIntegralDPL** `M9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TotalDiasDPL>=TCAposentadoriaIntegral*360{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -187,7 +174,6 @@ order: 3
 * * *
 
 ##### **CarenciaDER** `I10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DER;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<"&DER;CarenciaTCAdicionado){% endhighlight %}
 
 
@@ -197,10 +183,9 @@ order: 3
 * * *
 
 ##### **CarenciaDERReafirmada1** `I11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada1;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<"&DERReafirmada1;CarenciaTCAdicionado);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -211,10 +196,9 @@ order: 3
 * * *
 
 ##### **CarenciaDERReafirmada2** `I12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);SUMIF(DataFinalTCDiscriminadoProcessado;"<="&DERReafirmada2;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<="&DERReafirmada2;CarenciaTCAdicionado);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -225,7 +209,6 @@ order: 3
 * * *
 
 ##### **CarenciaDPE** `I5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPEMaisUm;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<"&DPEMaisUm;CarenciaTCAdicionado){% endhighlight %}
 
 
@@ -235,7 +218,6 @@ order: 3
 * * *
 
 ##### **CarenciaDPL** `I9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPL;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<"&DPL;CarenciaTCAdicionado){% endhighlight %}
 
 
@@ -245,10 +227,9 @@ order: 3
 * * *
 
 ##### **CoeficienteDER** `N10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(DireitoAoBeneficioDER;IF(BeneficioIntegralDER;1;MIN(((ROUNDDOWN(TotalDiasDER/360)-ROUNDDOWN(TotalDiasTCMinimo/360))*0,05)+0,7;1));""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -259,10 +240,9 @@ order: 3
 * * *
 
 ##### **CoeficienteDERReafirmada1** `N11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);IF(BeneficioIntegralDERReafirmada1;1;IF(DireitoAoBeneficioDERReafirmada1;MIN((ROUNDDOWN((TotalDiasDERReafirmada1-TotalDiasTCMinimo)/360)*0,05)+0,7;1);""));""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -273,10 +253,9 @@ order: 3
 * * *
 
 ##### **CoeficienteDERReafirmada2** `N12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);IF(BeneficioIntegralDERReafirmada2;1;IF(DireitoAoBeneficioDERReafirmada2;MIN((ROUNDDOWN((TotalDiasDERReafirmada2-TotalDiasTCMinimo)/360)*0,05)+0,7;1);""));""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -287,10 +266,9 @@ order: 3
 * * *
 
 ##### **CoeficienteDPE** `N5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(DireitoAoBeneficioDPE;IF(BeneficioIntegralDPE;1;MIN((ROUNDDOWN((TotalDiasDPE-TotalDiasTCMinimoDPE)/360)*0,06)+0,7;1));""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -301,10 +279,9 @@ order: 3
 * * *
 
 ##### **CoeficienteDPL** `N9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(DireitoAoBeneficioDPL;IF(BeneficioIntegralDPL;1;MIN(((ROUNDDOWN(TotalDiasDPL/360)-ROUNDDOWN(TotalDiasTCMinimo/360))*0,05)+0,7;1));""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -316,7 +293,7 @@ order: 3
 
 ##### **DPE** `B5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 d/m/yyyy
 ~~~
@@ -327,7 +304,6 @@ d/m/yyyy
 * * *
 
 ##### **DiasDER** `H10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=E10-(F10*360)-(G10*30){% endhighlight %}
 
 
@@ -337,10 +313,9 @@ d/m/yyyy
 * * *
 
 ##### **DiasDERReafirmada1** `H11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(E11);E11-(F11*360)-(G11*30);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -351,10 +326,9 @@ d/m/yyyy
 * * *
 
 ##### **DiasDERReafirmada2** `H12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(E12);E12-(F12*360)-(G12*30);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -365,7 +339,6 @@ d/m/yyyy
 * * *
 
 ##### **DiasDPE** `H5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=E5-(F5*360)-(G5*30){% endhighlight %}
 
 
@@ -375,7 +348,6 @@ d/m/yyyy
 * * *
 
 ##### **DiasDPL** `H9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=E9-(F9*360)-(G9*30){% endhighlight %}
 
 
@@ -385,10 +357,9 @@ d/m/yyyy
 * * *
 
 ##### **DiasFaltantesPedagio** `H7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN(E7-(F7*360)-(G7*30)){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -399,10 +370,9 @@ d/m/yyyy
 * * *
 
 ##### **DiasPedagio** `H6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN(E6-(F6*360)-(G6*30)){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -413,10 +383,9 @@ d/m/yyyy
 * * *
 
 ##### **DiasTCMinimo** `H8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN(E8-(F8*360)-(G8*30)){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -427,10 +396,9 @@ d/m/yyyy
 * * *
 
 ##### **DireitoAoBeneficioDER** `L10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=AND(IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaDER;TotalDiasDER>=TotalDiasTCMinimo){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -441,10 +409,9 @@ d/m/yyyy
 * * *
 
 ##### **DireitoAoBeneficioDERReafirmada1** `L11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);AND(IdadeDERReafirmada1>=IdadeMinima;TotalCarenciaDERReafirmada1>=CarenciaDERReafirmada1;TotalDiasDERReafirmada1>=TotalDiasTCMinimo);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -455,10 +422,9 @@ d/m/yyyy
 * * *
 
 ##### **DireitoAoBeneficioDERReafirmada2** `L12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);AND(IdadeDERReafirmada2>=IdadeMinima;TotalCarenciaDERReafirmada2>=CarenciaDERReafirmada2;TotalDiasDERReafirmada2>=TotalDiasTCMinimo);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -469,10 +435,9 @@ d/m/yyyy
 * * *
 
 ##### **DireitoAoBeneficioDPE** `L5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=AND(TotalCarenciaDPE>=CarenciaDPE;TotalDiasDPE>=TotalDiasTCMinimoDPE){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -483,10 +448,9 @@ d/m/yyyy
 * * *
 
 ##### **DireitoAoBeneficioDPL** `L9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=AND(IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaDPL;TotalDiasDPL>=TotalDiasTCMinimo){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0%
 ~~~
@@ -497,10 +461,9 @@ d/m/yyyy
 * * *
 
 ##### **IdadeDER** `C10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=DAYS360(DataNascimento;DER-1)/360{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.00
 ~~~
@@ -511,10 +474,9 @@ d/m/yyyy
 * * *
 
 ##### **IdadeDERReafirmada1** `C11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);DAYS360(DataNascimento;DERReafirmada1-1)/360;""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.00
 ~~~
@@ -525,10 +487,9 @@ d/m/yyyy
 * * *
 
 ##### **IdadeDERReafirmada2** `C12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);DAYS360(DataNascimento;DERReafirmada2-1)/360;""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.00
 ~~~
@@ -539,10 +500,9 @@ d/m/yyyy
 * * *
 
 ##### **IdadeDPE** `C5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=DAYS360(DataNascimento;DPE)/360{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.00
 ~~~
@@ -553,10 +513,9 @@ d/m/yyyy
 * * *
 
 ##### **IdadeDPL** `C9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=DAYS360(DataNascimento;DPL-1)/360{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.00
 ~~~
@@ -567,10 +526,9 @@ d/m/yyyy
 * * *
 
 ##### **MesesDER** `G10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN((E10-(F10*360))/30){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -581,10 +539,9 @@ d/m/yyyy
 * * *
 
 ##### **MesesDERReafirmada1** `G11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(E11);ROUNDDOWN((E11-(F11*360))/30);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -595,10 +552,9 @@ d/m/yyyy
 * * *
 
 ##### **MesesDERReafirmada2** `G12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(E12);ROUNDDOWN((E12-(F12*360))/30);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -609,10 +565,9 @@ d/m/yyyy
 * * *
 
 ##### **MesesDPE** `G5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN((E5-(F5*360))/30){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -623,10 +578,9 @@ d/m/yyyy
 * * *
 
 ##### **MesesDPL** `G9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN((E9-(F9*360))/30){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -637,10 +591,9 @@ d/m/yyyy
 * * *
 
 ##### **MesesFaltantesComPedagio** `G7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN((E7-(F7*360))/30){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -651,10 +604,9 @@ d/m/yyyy
 * * *
 
 ##### **MesesPedagio** `G6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN((E6-(F6*360))/30){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -665,10 +617,9 @@ d/m/yyyy
 * * *
 
 ##### **MesesTCMinimo** `G8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ROUNDDOWN((E8-(F8*360))/30){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -679,10 +630,9 @@ d/m/yyyy
 * * *
 
 ##### **PontosDER** `D10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(AND(Especie=42;DER>=VigenciaPontos);(TotalDiasDER/360)+IdadeDER;""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.00
 ~~~
@@ -693,10 +643,9 @@ d/m/yyyy
 * * *
 
 ##### **PontosDERReafirmada1** `D11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(AND(Especie=42;DERReafirmada1>=VigenciaPontos);(TotalDiasDER/360)+IdadeDERReafirmada1;""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.00
 ~~~
@@ -707,10 +656,9 @@ d/m/yyyy
 * * *
 
 ##### **PontosDERReafirmada2** `D12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(AND(Especie=42;DERReafirmada2>=VigenciaPontos);(TotalDiasDER/360)+IdadeDERReafirmada2;""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.00
 ~~~
@@ -721,10 +669,9 @@ d/m/yyyy
 * * *
 
 ##### **TotalAcrescimosDER** `J10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DER;Acrescimos){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -735,10 +682,9 @@ d/m/yyyy
 * * *
 
 ##### **TotalAcrescimosDERReafirmada1** `J11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada1;Acrescimos);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -749,10 +695,9 @@ d/m/yyyy
 * * *
 
 ##### **TotalAcrescimosDERReafirmada2** `J12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada2;Acrescimos);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -763,10 +708,9 @@ d/m/yyyy
 * * *
 
 ##### **TotalAcrescimosDPE** `J5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPEMaisUm;Acrescimos){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -777,10 +721,9 @@ d/m/yyyy
 * * *
 
 ##### **TotalAcrescimosDPL** `J9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPL;Acrescimos){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -791,7 +734,6 @@ d/m/yyyy
 * * *
 
 ##### **TotalCarenciaDER** `K10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=CarenciaDER+TotalAcrescimosDER{% endhighlight %}
 
 
@@ -801,10 +743,9 @@ d/m/yyyy
 * * *
 
 ##### **TotalCarenciaDERReafirmada1** `K11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);CarenciaDERReafirmada1+TotalAcrescimosDERReafirmada1;""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -815,10 +756,9 @@ d/m/yyyy
 * * *
 
 ##### **TotalCarenciaDERReafirmada2** `K12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);CarenciaDERReafirmada2+TotalAcrescimosDERReafirmada2;""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -829,7 +769,6 @@ d/m/yyyy
 * * *
 
 ##### **TotalCarenciaDPE** `K5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=CarenciaDPE+TotalAcrescimosDPE{% endhighlight %}
 
 
@@ -839,7 +778,6 @@ d/m/yyyy
 * * *
 
 ##### **TotalCarenciaDPL** `K9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=CarenciaDPL+TotalAcrescimosDPL{% endhighlight %}
 
 
@@ -849,7 +787,6 @@ d/m/yyyy
 * * *
 
 ##### **TotalDiasDER** `E10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<="&DER;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<="&DER;TotalDiasConvertidosTCAdicionado)
 
 {% endhighlight %}
@@ -861,10 +798,9 @@ d/m/yyyy
 * * *
 
 ##### **TotalDiasDERReafirmada1** `E11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada1;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DERReafirmada1;TotalDiasConvertidosTCAdicionado);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -875,10 +811,9 @@ d/m/yyyy
 * * *
 
 ##### **TotalDiasDERReafirmada2** `E12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada2;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DERReafirmada2;TotalDiasConvertidosTCAdicionado);""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -889,7 +824,6 @@ d/m/yyyy
 * * *
 
 ##### **TotalDiasDPE** `E5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPEMaisUm;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DPEMaisUm;TotalDiasConvertidosTCAdicionado){% endhighlight %}
 
 
@@ -899,7 +833,6 @@ d/m/yyyy
 * * *
 
 ##### **TotalDiasDPL** `E9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPL;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DPL;TotalDiasConvertidosTCAdicionado){% endhighlight %}
 
 
@@ -909,7 +842,6 @@ d/m/yyyy
 * * *
 
 ##### **TotalDiasFaltantesComPedagio** `E7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=((IF(Sexo="Mulher";25;30)*360)+TotalDiasPedagio)-TotalDiasDPE{% endhighlight %}
 
 
@@ -919,7 +851,6 @@ d/m/yyyy
 * * *
 
 ##### **TotalDiasPedagio** `E6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=((IF(Sexo="Mulher";25;30)*360)-TotalDiasDPE)*0,4{% endhighlight %}
 
 

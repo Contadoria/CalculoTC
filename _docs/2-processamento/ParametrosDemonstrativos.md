@@ -5,10 +5,9 @@ order: 2
 ---
 
 ##### **DadosObrigatoriosFaltantes** `B28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(LEN(Sexo)>0;"";"Sexo#")& IF(ISNUMBER(DataNascimento);"";"Nascimento#")&IF(ISNUMBER(Especie);"";"Espécie#")&IF(ISNUMBER(DER);"";"DER#"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -19,10 +18,9 @@ order: 2
 * * *
 
 ##### **ObservacoesPeriodosAdicionados** `B23`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=JOIN(CHAR(10);FILTER(OFFSET(ObservacoesTCAdicionadoDemonstrativo;1;0);OFFSET(ObservacoesTCAdicionadoDemonstrativo;1;0)<>"")){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -33,10 +31,9 @@ order: 2
 * * *
 
 ##### **ObservacoesPeriodosDiscriminados** `B20`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=JOIN(CHAR(10);FILTER(OFFSET(ObservacoesTCDiscriminadoDemonstrativo;1;0);OFFSET(ObservacoesTCDiscriminadoDemonstrativo;1;0)<>"")){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -47,10 +44,9 @@ order: 2
 * * *
 
 ##### **TemPeriodosAdicionados** `D23`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=NOT(NOT(SUM(ARRAYFORMULA(ISNUMBER(AnosTCAdicionadoDemonstrativo)*ISNUMBER(MesesTCAdicionadoDemonstrativo)*ISNUMBER(COUNTA(DiasTCAdicionadoDemonstrativo)))))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -61,10 +57,9 @@ order: 2
 * * *
 
 ##### **TextoAnosDER** `L5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(AnosDER;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -75,10 +70,9 @@ order: 2
 * * *
 
 ##### **TextoAnosDERReafirmada1** `N5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);TEXT(AnosDERReafirmada1;"0");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -89,10 +83,9 @@ order: 2
 * * *
 
 ##### **TextoAnosDERReafirmada2** `P5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);TEXT(AnosDERReafirmada2;"0");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -103,10 +96,9 @@ order: 2
 * * *
 
 ##### **TextoAnosDPE** `B5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(AnosDPE;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -117,10 +109,9 @@ order: 2
 * * *
 
 ##### **TextoAnosDPL** `J5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(AnosDPL;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -131,10 +122,9 @@ order: 2
 * * *
 
 ##### **TextoAnosFaltantesComPedagio** `F5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ComputarPedagio;TEXT(AnosFaltantesComPedagio;"0");0){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -145,10 +135,9 @@ order: 2
 * * *
 
 ##### **TextoAnosPedagio** `D5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ComputarPedagio;TEXT(AnosPedagio;"0");" "){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -159,10 +148,9 @@ order: 2
 * * *
 
 ##### **TextoAnosTCMinimo** `H5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ComputarPedagio;TEXT(AnosTCMinimo;"0");0){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -173,10 +161,9 @@ order: 2
 * * *
 
 ##### **TextoCarenciaDER** `L11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(CarenciaDER;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -187,10 +174,9 @@ order: 2
 * * *
 
 ##### **TextoCarenciaDERReafirmada1** `N11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);TEXT(CarenciaDERReafirmada1;"0");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -201,10 +187,9 @@ order: 2
 * * *
 
 ##### **TextoCarenciaDERReafirmada2** `P11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);TEXT(CarenciaDERReafirmada2;"0");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -215,10 +200,9 @@ order: 2
 * * *
 
 ##### **TextoCarenciaDPE** `B11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(CarenciaDPE;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -229,10 +213,9 @@ order: 2
 * * *
 
 ##### **TextoCarenciaDPL** `J11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(CarenciaDPL;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -243,10 +226,9 @@ order: 2
 * * *
 
 ##### **TextoCarenciaPedagio** `D11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -257,10 +239,9 @@ order: 2
 * * *
 
 ##### **TextoCarenciaTCMinimo** `H11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -271,10 +252,9 @@ order: 2
 * * *
 
 ##### **TextoCarenciaTempoFaltante** `F11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -285,10 +265,9 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteDER** `L13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(CoeficienteDER;"0%"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -299,10 +278,9 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteDERReafirmada1** `N13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);TEXT(CoeficienteDERReafirmada1;"0%");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -313,10 +291,9 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteDERReafirmada2** `P13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);TEXT(CoeficienteDERReafirmada2;"0%");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -327,10 +304,9 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteDPE** `B13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(DireitoAoBeneficioDPE;TEXT(CoeficienteDPE;"0%");" "){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -341,10 +317,9 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteDPL** `J13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(DireitoAoBeneficioDPL;TEXT(CoeficienteDPL;"0%");" "){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -355,10 +330,9 @@ order: 2
 * * *
 
 ##### **TextoCoeficientePedagio** `D13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -369,10 +343,9 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteTCMinimo** `H13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -383,10 +356,9 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteTempoFaltante** `F13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -397,10 +369,9 @@ order: 2
 * * *
 
 ##### **TextoDER** `L3`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=CHAR(9)&TEXT(DER;"dd/mm/yyyy")&" (DER)"{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -411,10 +382,9 @@ order: 2
 * * *
 
 ##### **TextoDERReafirmada1** `N3`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);CHAR(9)&TEXT(DERReafirmada1;"dd/mm/yyyy")&" ("&RotuloDERReafirmada1&")";""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -425,10 +395,9 @@ order: 2
 * * *
 
 ##### **TextoDERReafirmada2** `P3`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);CHAR(9)&TEXT(DERReafirmada2;"dd/mm/yyyy")&" ("&RotuloDERReafirmada2&")";""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -439,10 +408,9 @@ order: 2
 * * *
 
 ##### **TextoDPE** `B3`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=CHAR(9)&TEXT(DPE;"dd/mm/yyyy")&" (DPE)"{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -453,10 +421,9 @@ order: 2
 * * *
 
 ##### **TextoDPL** `J3`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=CHAR(9)&TEXT(DPL;"dd/mm/yyyy")&" (DPL)"{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -467,10 +434,9 @@ order: 2
 * * *
 
 ##### **TextoDiasDER** `L9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(DiasDER;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -481,10 +447,9 @@ order: 2
 * * *
 
 ##### **TextoDiasDERReafirmada1** `N9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);TEXT(DiasDERReafirmada1;"0");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -495,10 +460,9 @@ order: 2
 * * *
 
 ##### **TextoDiasDERReafirmada2** `P9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);TEXT(DiasDERReafirmada2;"0");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -509,10 +473,9 @@ order: 2
 * * *
 
 ##### **TextoDiasDPE** `B9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(DiasDPE;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -523,10 +486,9 @@ order: 2
 * * *
 
 ##### **TextoDiasDPL** `J9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(DiasDPL;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -537,10 +499,9 @@ order: 2
 * * *
 
 ##### **TextoDiasFaltantesComPedagio** `F9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ComputarPedagio;TEXT(DiasFaltantesPedagio;"0");0){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -551,10 +512,9 @@ order: 2
 * * *
 
 ##### **TextoDiasPedagio** `D9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ComputarPedagio;TEXT(DiasPedagio;"0");" "){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -565,10 +525,9 @@ order: 2
 * * *
 
 ##### **TextoDiasTCMinimo** `H9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ComputarPedagio;TEXT(DiasTCMinimo;"0");0){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -579,10 +538,9 @@ order: 2
 * * *
 
 ##### **TextoIdadeDER** `L15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(IdadeDER;"0.00"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -593,10 +551,9 @@ order: 2
 * * *
 
 ##### **TextoIdadeDERReafirmada1** `N15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);TEXT(IdadeDERReafirmada1;"0.00");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -607,10 +564,9 @@ order: 2
 * * *
 
 ##### **TextoIdadeDERReafirmada2** `P15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);TEXT(IdadeDERReafirmada2;"0.00");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -621,10 +577,9 @@ order: 2
 * * *
 
 ##### **TextoIdadeDPE** `B15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -635,10 +590,9 @@ order: 2
 * * *
 
 ##### **TextoIdadeDPL** `J15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(IdadeDPL;"0.00"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -649,10 +603,9 @@ order: 2
 * * *
 
 ##### **TextoIdadePedagio** `D15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -663,10 +616,9 @@ order: 2
 * * *
 
 ##### **TextoIdadeTCMinimo** `H15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -677,10 +629,9 @@ order: 2
 * * *
 
 ##### **TextoIdadeTempoFaltante** `F15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -691,10 +642,9 @@ order: 2
 * * *
 
 ##### **TextoMesesDER** `L7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(MesesDER;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -705,10 +655,9 @@ order: 2
 * * *
 
 ##### **TextoMesesDERReafirmada1** `N7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);TEXT(MesesDERReafirmada1;"0");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -719,10 +668,9 @@ order: 2
 * * *
 
 ##### **TextoMesesDERReafirmada2** `P7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);TEXT(MesesDERReafirmada2;"0");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -733,10 +681,9 @@ order: 2
 * * *
 
 ##### **TextoMesesDPE** `B7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(MesesDPE;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -747,10 +694,9 @@ order: 2
 * * *
 
 ##### **TextoMesesDPL** `J7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=TEXT(MesesDPL;"0"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -761,10 +707,9 @@ order: 2
 * * *
 
 ##### **TextoMesesFaltantesComPedagio** `F7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ComputarPedagio;TEXT(MesesFaltantesComPedagio;"0");0){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -775,10 +720,9 @@ order: 2
 * * *
 
 ##### **TextoMesesPedagio** `D7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ComputarPedagio;TEXT(MesesPedagio;"0");" "){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -789,10 +733,9 @@ order: 2
 * * *
 
 ##### **TextoMesesTCMinimo** `H7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ComputarPedagio;TEXT(MesesTCMinimo;"0");0){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -803,10 +746,9 @@ order: 2
 * * *
 
 ##### **TextoObservacoes** `D20`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(MostrarObservacoesAutomaticas="Sim";IFERROR("Observações períodos discriminados:"&CHAR(10)&CONCATENATE(ObservacoesPeriodosDiscriminados)&CHAR(10)&CHAR(10);"")&IFERROR("Observações períodos adicionados:"&CHAR(10)&CONCATENATE(ObservacoesPeriodosAdicionados)&CHAR(10)&CHAR(10);"");"")&IF(ISTEXT(ObservacoesFinais);"Observações finais:"&CHAR(10)&ObservacoesFinais;""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -817,10 +759,9 @@ order: 2
 * * *
 
 ##### **TextoPedagio** `D3`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=CHAR(9)&"Pedágio "&IF(ComputarPedagio;"("&TEXT(TotalDiasPedagio;"0.00")&" dias)";""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -831,10 +772,9 @@ order: 2
 * * *
 
 ##### **TextoPontosDER** `L17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(PontosDER);TEXT(PontosDER;"0.00");" "){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -845,10 +785,9 @@ order: 2
 * * *
 
 ##### **TextoPontosDERReafirmada1** `N17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);IF(ISNUMBER(PontosDERReafirmada1);TEXT(PontosDERReafirmada1;"0.00");" ");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -859,10 +798,9 @@ order: 2
 * * *
 
 ##### **TextoPontosDERReafirmada2** `P17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);IF(ISNUMBER(PontosDERReafirmada2);TEXT(PontosDERReafirmada2;"0.00");" ");""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -873,10 +811,9 @@ order: 2
 * * *
 
 ##### **TextoPontosDPE** `B17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -887,10 +824,9 @@ order: 2
 * * *
 
 ##### **TextoPontosDPL** `J17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -901,10 +837,9 @@ order: 2
 * * *
 
 ##### **TextoPontosPedagio** `D17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -915,10 +850,9 @@ order: 2
 * * *
 
 ##### **TextoPontosTCMinimo** `H17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -929,10 +863,9 @@ order: 2
 * * *
 
 ##### **TextoPontosTempoFaltante** `F17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=" "{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -943,10 +876,9 @@ order: 2
 * * *
 
 ##### **TextoTCMinimo** `H3`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=CHAR(9)&"Tempo mínimo "&IF(ComputarPedagio;"("&TEXT(TotalDiasTCMinimo;"0.00")&" dias)";""){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -957,10 +889,9 @@ order: 2
 * * *
 
 ##### **TextoTempoFaltanteComPedagio** `F3`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=CHAR(9)&"Tempo faltante com pedágio "&IF(DireitoAdquiridoDPE;"";"("&TEXT(TotalDiasFaltantesComPedagio;"0.00")&" dias)"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~

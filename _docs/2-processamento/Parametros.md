@@ -5,10 +5,9 @@ order: 1
 ---
 
 ##### **CarenciaMinimaDER** `B8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IFERROR(IF(MIN(DataInicialTCDiscriminadoProcessado)>=DLB;180;INDEX(TabelaCarencia!A:B;MATCH(YEAR(DER-1);TabelaCarencia!A:A;1);2));180){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -19,10 +18,9 @@ order: 1
 * * *
 
 ##### **CarenciaMinimaDERReafirmada1** `B9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IFERROR(IF(MIN(DataInicialTCDiscriminadoProcessado)>=DLB;180;INDEX(TabelaCarencia!A:B;MATCH(YEAR(DERReafirmada1-1);TabelaCarencia!A:A;1);2));180){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -33,10 +31,9 @@ order: 1
 * * *
 
 ##### **CarenciaMinimaDERReafirmada2** `B10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IFERROR(IF(MIN(DataInicialTCDiscriminadoProcessado)>=DLB;180;INDEX(TabelaCarencia!A:B;MATCH(YEAR(DERReafirmada2-1);TabelaCarencia!A:A;1);2));180){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -47,10 +44,9 @@ order: 1
 * * *
 
 ##### **CarenciaMinimaDPE** `B6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IFERROR(IF(MIN(DataInicialTCDiscriminadoProcessado)>=DLB;180;INDEX(TabelaCarencia!A:B;MATCH(YEAR(DPE);TabelaCarencia!A:A;1);2));180){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -61,10 +57,9 @@ order: 1
 * * *
 
 ##### **CarenciaMinimaDPL** `B7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IFERROR(IF(MIN(DataInicialTCDiscriminadoProcessado)>=DLB;180;INDEX(TabelaCarencia!A:B;MATCH(YEAR(DPL-1);TabelaCarencia!A:A;1);2));180){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -75,10 +70,9 @@ order: 1
 * * *
 
 ##### **CarenciaMinimaIdade** `B5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IFERROR(IF(MIN(DataInicialTCDiscriminadoProcessado)>=DLB;180;INDEX(TabelaCarencia!A:B;MATCH(YEAR(DataNascimento)+IdadeMinima;TabelaCarencia!A:A;1);2));180){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0
 ~~~
@@ -89,10 +83,9 @@ order: 1
 * * *
 
 ##### **ComputarPedagio** `B3`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=AND(Especie=42;TotalDiasDPE>0;TotalDiasFaltantesComPedagio>0;TotalDiasFaltantesComPedagio+TotalDiasDPE<(IF(Sexo="Mulher";30;35)*360)){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 mm"/"yyyy
 ~~~
@@ -103,10 +96,9 @@ mm"/"yyyy
 * * *
 
 ##### **DireitoAdquiridoDPE** `B12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=AND(TotalCarenciaDPE>=CarenciaDPE;TotalDiasDPE>=TotalDiasTCMinimoDPE){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 mm"/"yyyy
 ~~~
@@ -117,10 +109,9 @@ mm"/"yyyy
 * * *
 
 ##### **IdadeMinima** `B4`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(Especie=41;IF(BeneficioRural="Sim";IF(Sexo="Homem";60;55);IF(Sexo="Homem";65;60));IF(ComputarPedagio;IF(Sexo="Mulher";48;53);0)){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0
 ~~~
@@ -131,10 +122,9 @@ mm"/"yyyy
 * * *
 
 ##### **PontuacaoMinimaDER** `B14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(AND(Especie=42;DER>=VigenciaPontos);INDEX(TabelaPontuacao!A:C;MATCH(DER-1;TabelaPontuacao!A:A;1);IF(Sexo="Homem";2;3));"não se aplica"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -145,10 +135,9 @@ mm"/"yyyy
 * * *
 
 ##### **PontuacaoMinimaDERReafirmada1** `B15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(AND(Especie=42;DERReafirmada1>=VigenciaPontos);INDEX(TabelaPontuacao!A:C;MATCH(DERReafirmada1-1;TabelaPontuacao!A:A;1);IF(Sexo="Homem";2;3));"não se aplica"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -159,10 +148,9 @@ mm"/"yyyy
 * * *
 
 ##### **PontuacaoMinimaDERReafirmada2** `B16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(AND(Especie=42;DERReafirmada2>=VigenciaPontos);INDEX(TabelaPontuacao!A:C;MATCH(DERReafirmada2-1;TabelaPontuacao!A:A;1);IF(Sexo="Homem";2;3));"não se aplica"){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -173,10 +161,9 @@ mm"/"yyyy
 * * *
 
 ##### **TotalDiasTCMinimo** `B13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(Especie=42;IF(ComputarPedagio;MIN(TotalDiasDPE+TotalDiasFaltantesComPedagio;IF(Sexo="Homem";35*360;30*360));IF(DireitoAdquiridoDPE;IF(Sexo="Homem";30*360;25*360);TCAposentadoriaIntegral*360));TCAposentadoriaIntegral*360){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0
 ~~~
@@ -187,10 +174,9 @@ mm"/"yyyy
 * * *
 
 ##### **TotalDiasTCMinimoDPE** `B11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(Especie=42;IF(Sexo="Homem";30*360;25*360);0){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0
 ~~~

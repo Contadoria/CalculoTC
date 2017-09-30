@@ -6,12 +6,12 @@ order: 2
 
 ##### **ClassificacaoTCInformado1** `H:H`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_RANGE TabelaConversao!A:A
 ~~~
@@ -22,7 +22,7 @@ VALUE_IN_RANGE TabelaConversao!A:A
 
 ##### **DataFinalTCDiscriminado** `D:D`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -33,10 +33,9 @@ dd/MM/yyyy
 * * *
 
 ##### **DataFinalTratada** `F:F`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(DataFinalTratada)=1;"DF Tratada";IF(DataInicialTCDiscriminado*DataFinalTCDiscriminado;DataFinalTCDiscriminado-(HOUR(DataFinalTCDiscriminado)/24);""))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -48,7 +47,7 @@ dd/MM/yyyy
 
 ##### **DataInicialTCDiscriminado** `C:C`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -59,10 +58,9 @@ dd/MM/yyyy
 * * *
 
 ##### **DataInicialTratada** `E:E`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(DataInicialTratada)=1;"DI Tratada";IF(DataInicialTCDiscriminado*DataFinalTCDiscriminado;DataInicialTCDiscriminado-(HOUR(DataInicialTCDiscriminado)/24);""))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -74,7 +72,7 @@ dd/MM/yyyy
 
 ##### **DescricaoTCDiscriminado** `A:A`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -85,7 +83,6 @@ dd/MM/yyyy
 * * *
 
 ##### **ErrosTCDiscriminado** `G:G`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(ErrosTCDiscriminado)=1;"Erros";IF(DataInicialTratada*DataFinalTratada;IF(MMULT((DataInicialTratada<=TRANSPOSE(DataFinalTratada))*(DataFinalTratada>=TRANSPOSE(DataInicialTratada));SIGN(ROW(DataInicialTratada)))>1;"Concomitância";IF(DataFinalTratada<DataInicialTratada;"Final < Inicial";""));" "))){% endhighlight %}
 
 
@@ -95,10 +92,9 @@ dd/MM/yyyy
 * * *
 
 ##### **FatorConversaoTCDiscriminado** `J:J`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(FatorConversaoTCDiscriminado)=1;"Fator Conv.";IF(DataInicialTCDiscriminado*DataFinalTCDiscriminado;IF(FatorConversaoTCDiscriminadoModificado;FatorConversaoTCDiscriminadoModificado;IF(ReferenciaFatorTCDiscriminado="N";0;TCAposentadoriaIntegral/(IF(ReferenciaFatorTCDiscriminado="V";{" ";ReferenciaFatorTCDiscriminado};ReferenciaFatorTCDiscriminado))));""))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 0.00
 ~~~
@@ -110,7 +106,7 @@ dd/MM/yyyy
 
 ##### **FatorConversaoTCDiscriminadoModificado** `K:K`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -122,12 +118,12 @@ dd/MM/yyyy
 
 ##### **MotivosTCDiscriminado** `L:L`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_RANGE ListaMotivos!A:A
 ~~~
@@ -138,7 +134,7 @@ VALUE_IN_RANGE ListaMotivos!A:A
 
 ##### **NaturezaTCDiscriminado** `B:B`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -150,7 +146,7 @@ VALUE_IN_RANGE ListaMotivos!A:A
 
 ##### **ObservacoesTCDiscriminado** `M:M`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -161,7 +157,6 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **ReferenciaFatorTCDiscriminado** `I:I`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=ARRAYFORMULA(IF(ROW(ReferenciaFatorTCDiscriminado)=1;"Referência";IF(DataInicialTCDiscriminado*DataFinalTCDiscriminado;IF(ClassificacaoTCInformado1<>"";VLOOKUP(ClassificacaoTCInformado1;TabelaConversao!A:C;IF(Sexo="Homem";2;3);FALSE);VLOOKUP("1 - Comum";TabelaConversao!A:C;IF(Sexo="Homem";2;3);FALSE));""))){% endhighlight %}
 
 
@@ -172,7 +167,7 @@ VALUE_IN_RANGE ListaMotivos!A:A
 
 ##### **TCInformado** `A:A`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~

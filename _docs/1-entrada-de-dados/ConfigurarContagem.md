@@ -6,12 +6,12 @@ order: 1
 
 ##### **AjustarMarcosTemporais** `H6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 #,##0
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_LIST Sim,Não
 ~~~
@@ -22,12 +22,12 @@ VALUE_IN_LIST Sim,Não
 
 ##### **AplicarLei11718** `H7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 #,##0
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_LIST 1 - Não,2 - A partir de sua vigência,3 - Retroativamente
 ~~~
@@ -38,7 +38,7 @@ VALUE_IN_LIST 1 - Não,2 - A partir de sua vigência,3 - Retroativamente
 
 ##### **DERReafirmada1** `H11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -51,7 +51,7 @@ dd/MM/yyyy
 
 ##### **DERReafirmada2** `H12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -63,7 +63,7 @@ dd/MM/yyyy
 
 ##### **DLB** `D6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -75,10 +75,9 @@ dd/MM/yyyy
 * * *
 
 ##### **DPEMaisUm** `D7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=DPE+1{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -91,7 +90,7 @@ dd/MM/yyyy
 
 ##### **DPL** `D8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -103,12 +102,12 @@ dd/MM/yyyy
 
 ##### **EliminarConcomitancia** `H5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 #,##0
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_LIST Sim,Não
 ~~~
@@ -118,13 +117,12 @@ VALUE_IN_LIST Sim,Não
 * * *
 
 ##### **MarcosTemporais** `D6:D17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=DPE+1
 =DER+1
 =DERReafirmada1
 =DERReafirmada2{% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -141,7 +139,7 @@ Indica o marco temporal relativo a MP nº 676/2015, início da vigência dos pon
 
 ##### **RotuloDERReafirmada1** `F11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -153,7 +151,7 @@ Indica o marco temporal relativo a MP nº 676/2015, início da vigência dos pon
 
 ##### **RotuloDERReafirmada2** `F12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -165,7 +163,7 @@ Indica o marco temporal relativo a MP nº 676/2015, início da vigência dos pon
 
 ##### **VigenciaPontos** `D9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~

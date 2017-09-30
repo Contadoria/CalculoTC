@@ -6,7 +6,7 @@ order: 0
 
 ##### **Autor** `D6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -19,12 +19,12 @@ order: 0
 
 ##### **BeneficioDeficiente** `K9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 #,##0
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_LIST Sim,Não
 ~~~
@@ -35,12 +35,12 @@ VALUE_IN_LIST Sim,Não
 
 ##### **BeneficioRural** `K8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 #,##0
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_LIST Sim,Não
 ~~~
@@ -51,7 +51,7 @@ VALUE_IN_LIST Sim,Não
 
 ##### **Citacao** `D9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -64,7 +64,7 @@ dd/MM/yyyy
 ##### **DER** `K7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
 
-+ **Regra de validação**:
+
 ~~~
 DATE_IS_VALID_DATE 
 ~~~
@@ -76,7 +76,7 @@ DATE_IS_VALID_DATE
 
 ##### **DataNascimento** `D13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -88,12 +88,12 @@ dd/MM/yyyy
 
 ##### **Especie** `K6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_RANGE ListaBeneficios!A:A
 ~~~
@@ -104,7 +104,7 @@ VALUE_IN_RANGE ListaBeneficios!A:A
 
 ##### **NB** `K5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -116,7 +116,7 @@ VALUE_IN_RANGE ListaBeneficios!A:A
 
 ##### **Processo** `D5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
@@ -129,7 +129,7 @@ VALUE_IN_RANGE ListaBeneficios!A:A
 
 ##### **Protocolo** `D8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 dd/MM/yyyy
 ~~~
@@ -142,7 +142,7 @@ dd/MM/yyyy
 
 ##### **Reu** `D7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 #,##0
 ~~~
@@ -154,12 +154,12 @@ dd/MM/yyyy
 
 ##### **Sexo** `D12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~
 
-+ **Regra de validação**:
+
 ~~~
 VALUE_IN_LIST Homem,Mulher
 ~~~
@@ -169,10 +169,9 @@ VALUE_IN_LIST Homem,Mulher
 * * *
 
 ##### **TCAposentadoriaIntegral** `K12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-+ **Fórmula**:
 {% highlight erlang %}=IF(ISNUMBER(TCAposentadoriaIntegralModificado);TCAposentadoriaIntegralModificado;IF(Especie=46;25;IF(Sexo="Homem";35;30))){% endhighlight %}
 
-+ **Formato**:
+
 ~~~
 #,##0
 ~~~
@@ -184,7 +183,7 @@ VALUE_IN_LIST Homem,Mulher
 
 ##### **TCAposentadoriaIntegralModificado** `L12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
-+ **Formato**:
+
 ~~~
 0.###############
 ~~~

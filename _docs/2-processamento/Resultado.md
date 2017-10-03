@@ -396,7 +396,7 @@ d/m/yyyy
 * * *
 
 ##### **DireitoAoBeneficioDER** `L10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=AND(IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaDER;TotalDiasDER>=TotalDiasTCMinimo){% endhighlight %}
+{% highlight erlang %}=IF(Especie=42;AND(IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaDER;TotalDiasDER>=TotalDiasTCMinimo);FALSE){% endhighlight %}
 
 
 ~~~
@@ -435,7 +435,7 @@ d/m/yyyy
 * * *
 
 ##### **DireitoAoBeneficioDPE** `L5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=AND(TotalCarenciaDPE>=CarenciaDPE;TotalDiasDPE>=TotalDiasTCMinimoDPE){% endhighlight %}
+{% highlight erlang %}=IF(Especie=42;AND(TotalCarenciaDPE>=CarenciaDPE;TotalDiasDPE>=TotalDiasTCMinimoDPE);FALSE){% endhighlight %}
 
 
 ~~~
@@ -448,7 +448,7 @@ d/m/yyyy
 * * *
 
 ##### **DireitoAoBeneficioDPL** `L9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=AND(IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaDPL;TotalDiasDPL>=TotalDiasTCMinimo){% endhighlight %}
+{% highlight erlang %}=IF(Especie=42;AND(IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaDPL;TotalDiasDPL>=TotalDiasTCMinimo);FALSE){% endhighlight %}
 
 
 ~~~

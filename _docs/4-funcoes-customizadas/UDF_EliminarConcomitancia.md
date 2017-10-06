@@ -12,6 +12,9 @@ order: 1
 * @return {array} A matriz com os períodos ajustados e ordenados após a eliminação da concomitância.
 *
 * @customfunction
+*
+* Alterado em 14/09/2017 - Comparação entre datas deve ser feita com uso de valueOf() ou getTime()
+*
 */
 function jef_ELIMINAR_CONCOMITANCIA(periodos) {
   
@@ -43,22 +46,22 @@ function jef_ELIMINAR_CONCOMITANCIA(periodos) {
         var pesoSegundo = periodos[i + 1][periodos[i + 1].length - 1];
         
         var conflito = Utilidades.datasSobrepostas(dataInicialPrimeiro, dataFinalPrimeiro, dataInicialSegundo, dataFinalSegundo);
-        
+
         if (conflito) {
           if (pesoPrimeiro >= pesoSegundo) {
-            if (dataFinalSegundo > dataFinalPrimeiro) {
+            if (dataFinalSegundo.valueOf() > dataFinalPrimeiro.valueOf()) { // As datas devem ser sempre comparadas com valueOf() ou getTime()
               periodos[i + 1][0] = Utilidades.diaSeguinte(dataFinalPrimeiro)
             } else {
               periodos[i + 1] = null;
             }
           } else {
-            if (dataInicialPrimeiro === dataInicialSegundo && dataFinalPrimeiro <= dataFinalSegundo) {
+            if (dataInicialPrimeiro.valueOf() === dataInicialSegundo.valueOf() && dataFinalPrimeiro.valueOf() <= dataFinalSegundo.valueOf()) {
               periodos[i] = null;
             } else {
-              if (dataInicialPrimeiro < dataInicialSegundo) {
+              if (dataInicialPrimeiro.valueOf() < dataInicialSegundo.valueOf()) {
                 periodos[i][1] = Utilidades.diaAnterior(dataInicialSegundo);
               }
-              if (dataFinalPrimeiro > dataFinalSegundo) {
+              if (dataFinalPrimeiro.valueOf() > dataFinalSegundo.valueOf()) {
                 acrescimos.push(Utilidades.copiarMatriz(periodos[i]));
                 acrescimos[acrescimos.length - 1][0] = Utilidades.diaSeguinte(dataFinalSegundo);
                 acrescimos[acrescimos.length - 1][1] = dataFinalPrimeiro;

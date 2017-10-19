@@ -174,11 +174,13 @@ order: 3
 * * *
 
 ##### **CarenciaDER** `I10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DER;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<"&DER;CarenciaTCAdicionado){% endhighlight %}
+{% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<="&DER;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<="&DER;CarenciaTCAdicionado){% endhighlight %}
 
 
 
 > Carência (número de contribuições) apuradas até a DER
+
+**18/10/2017**: alterado de "<" para "<="
 
 * * *
 

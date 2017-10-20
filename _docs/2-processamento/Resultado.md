@@ -229,7 +229,7 @@ order: 3
 * * *
 
 ##### **CoeficienteDER** `N10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(DireitoAoBeneficioDER;IF(BeneficioIntegralDER;1;MIN(((ROUNDDOWN(TotalDiasDER/360)-ROUNDDOWN(TotalDiasTCMinimo/360))*0,05)+0,7;1));""){% endhighlight %}
+{% highlight erlang %}=IF(DireitoAoBeneficioDER;IF(BeneficioIntegralDER;1;MIN(((ROUNDDOWN((TotalDiasDER-TotalDiasTCMinimo)/360))*0,05)+0,7;1));""){% endhighlight %}
 
 
 ~~~
@@ -237,12 +237,14 @@ order: 3
 ~~~
 
 
-> Coeficiente de cálculo apurado na DER
+> Coeficiente de cálculo apurado na DER.
+Substituído (ARREDONDAR.PARA.BAIXO(TotalDiasDER/360)-ARREDONDAR.PARA.BAIXO(TotalDiasTCMinimo/360)) por ARREDONDAR.PARA.BAIXO((TotalDIasDER-TotalDiasMinimo)/360)
+Alterado em 20/10/2017
 
 * * *
 
 ##### **CoeficienteDERReafirmada1** `N11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);IF(BeneficioIntegralDERReafirmada1;1;IF(DireitoAoBeneficioDERReafirmada1;MIN((ROUNDDOWN((TotalDiasDERReafirmada1-TotalDiasTCMinimo)/360)*0,05)+0,7;1);""));""){% endhighlight %}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);IF(BeneficioIntegralDERReafirmada1;1;IF(DireitoAoBeneficioDERReafirmada1;MIN(((ROUNDDOWN((TotalDiasDERReafirmada1-TotalDiasTCMinimo)/360))*0,05)+0,7;1);""));""){% endhighlight %}
 
 
 ~~~
@@ -281,7 +283,7 @@ order: 3
 * * *
 
 ##### **CoeficienteDPL** `N9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(DireitoAoBeneficioDPL;IF(BeneficioIntegralDPL;1;MIN(((ROUNDDOWN(TotalDiasDPL/360)-ROUNDDOWN(TotalDiasTCMinimo/360))*0,05)+0,7;1));""){% endhighlight %}
+{% highlight erlang %}=IF(DireitoAoBeneficioDPL;IF(BeneficioIntegralDPL;1;MIN(((ROUNDDOWN((TotalDiasDPL-TotalDiasTCMinimo)/360))*0,05)+0,7;1));""){% endhighlight %}
 
 
 ~~~
@@ -290,6 +292,8 @@ order: 3
 
 
 > Coeficiente de cálculo apurado na DPL
+Substituído (ARREDONDAR.PARA.BAIXO(TotalDiasDPL/360)-ARREDONDAR.PARA.BAIXO(TotalDiasTCMinimo/360)) por ARREDONDAR.PARA.BAIXO((TotalDIasDPL-TotalDiasMinimo)/360)
+Alterado em 20/10/2017
 
 * * *
 

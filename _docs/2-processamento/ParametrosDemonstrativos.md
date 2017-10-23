@@ -265,7 +265,7 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteDER** `L13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=TEXT(CoeficienteDER;"0%"){% endhighlight %}
+{% highlight erlang %}=IF(DireitoAoBeneficioDER;TEXT(CoeficienteDER;"0%");" "){% endhighlight %}
 
 
 ~~~
@@ -278,7 +278,7 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteDERReafirmada1** `N13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);TEXT(CoeficienteDERReafirmada1;"0%");""){% endhighlight %}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);IF(DireitoAoBeneficioDERReafirmada1;TEXT(CoeficienteDERReafirmada1;"0%");" ");""){% endhighlight %}
 
 
 ~~~
@@ -291,7 +291,7 @@ order: 2
 * * *
 
 ##### **TextoCoeficienteDERReafirmada2** `P13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);TEXT(CoeficienteDERReafirmada2;"0%");""){% endhighlight %}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);IF(DireitoAoBeneficioDERReafirmada2;TEXT(CoeficienteDERReafirmada2;"0%");" ");""){% endhighlight %}
 
 
 ~~~

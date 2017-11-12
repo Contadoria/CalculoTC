@@ -148,7 +148,7 @@ order: 2
 * * *
 
 ##### **TextoAnosTCMinimo** `H5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ComputarPedagio;TEXT(AnosTCMinimo;"0");0){% endhighlight %}
+{% highlight erlang %}=IF(Especie=42;TEXT(MIN(AnosTCMinimo;35);"0");0){% endhighlight %}
 
 
 ~~~

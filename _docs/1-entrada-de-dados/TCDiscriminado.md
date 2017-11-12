@@ -25,6 +25,7 @@ VALUE_IN_RANGE TabelaConversao!A:A
 
 ~~~
 dd/MM/yyyy
+d/m/yyyy
 ~~~
 
 
@@ -92,7 +93,7 @@ dd/MM/yyyy
 * * *
 
 ##### **FatorConversaoTCDiscriminado** `J:J`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ARRAYFORMULA(IF(ROW(FatorConversaoTCDiscriminado)=1;"Fator Conv.";IF(DataInicialTCDiscriminado*DataFinalTCDiscriminado;IF(FatorConversaoTCDiscriminadoModificado;FatorConversaoTCDiscriminadoModificado;IF(ReferenciaFatorTCDiscriminado="N";0;TCAposentadoriaIntegral/(IF(ReferenciaFatorTCDiscriminado="V";{" ";ReferenciaFatorTCDiscriminado};ReferenciaFatorTCDiscriminado))));""))){% endhighlight %}
+{% highlight erlang %}=ARRAYFORMULA(IF(ROW(FatorConversaoTCDiscriminado)=1;"Fator Conv.";IF(DataInicialTCDiscriminado*DataFinalTCDiscriminado;IF(FatorConversaoTCDiscriminadoModificado;FatorConversaoTCDiscriminadoModificado;IF(ReferenciaFatorTCDiscriminado="N";0;ROUND(TCAposentadoriaIntegral/(IF(ReferenciaFatorTCDiscriminado="V";{" ";ReferenciaFatorTCDiscriminado};ReferenciaFatorTCDiscriminado));2)));""))){% endhighlight %}
 
 
 ~~~
@@ -100,7 +101,10 @@ dd/MM/yyyy
 ~~~
 
 
-> Fórmula matriz (ArrayFormula) indica fator de conversão relacionado ao tempo discriminado.
+> digite aqui
+
+Fórmula matriz (ArrayFormula) indica fator de conversão relacionado ao tempo discriminado.
+Arredondamento até segunda casa consistente com Decreto 8.145/2013 (alterado em 09/11/2017)
 
 * * *
 
@@ -116,7 +120,7 @@ dd/MM/yyyy
 
 * * *
 
-##### **MotivosTCDiscriminado** `L:L`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **MotivosTCDiscriminado** `N:N`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
 
 ~~~
@@ -144,7 +148,7 @@ VALUE_IN_RANGE ListaMotivos!A:A
 
 * * *
 
-##### **ObservacoesTCDiscriminado** `M:M`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ObservacoesTCDiscriminado** `O:O`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
 
 ~~~
@@ -153,6 +157,31 @@ VALUE_IN_RANGE ListaMotivos!A:A
 
 
 > Observações referentes ao período discriminado
+
+* * *
+
+##### **PrioridadeTCDiscriminado** `L:L`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ARRAYFORMULA(IF(ROW(PrioridadeTCDiscriminado)=1;"Prioridade";IF(DataInicialTCDiscriminado*DataFinalTCDiscriminado;IF(PrioridadeTCDiscriminadoModificada="Sim";TRUE;IF(PrioridadeTCDiscriminadoModificada="Não";FALSE;MID(ClassificacaoTCInformado1;1;1)="9"));""))){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **PrioridadeTCDiscriminadoModificada** `M:M`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+
+
+~~~
+0.###############
+~~~
+
+
+~~~
+VALUE_IN_LIST Sim,Não
+~~~
+
+
 
 * * *
 

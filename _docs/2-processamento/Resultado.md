@@ -222,7 +222,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 * * *
 
 ##### **CoeficienteDER** `N10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(DireitoAoBeneficioDER;IF(BeneficioIntegralDER;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDER-TotalDiasTCMinimo)/360)*0,06)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(CarenciaDER/12)*0,01)+0,7;1))));""){% endhighlight %}
+{% highlight erlang %}=IF(DireitoAoBeneficioDER;IF(BeneficioIntegralDER;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDER-TotalDiasTCMinimo)/360)*0,05)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDER/12)*0,01)+0,7;1))));""){% endhighlight %}
 
 
 ~~~
@@ -237,7 +237,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 * * *
 
 ##### **CoeficienteDERReafirmada1** `N11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);IF(DireitoAoBeneficioDERReafirmada1;IF(BeneficioIntegralDERReafirmada1;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDERReafirmada1-TotalDiasTCMinimo)/360)*0,06)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(CarenciaDERReafirmada1/12)*0,01)+0,7;1);"")));"");""){% endhighlight %}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);IF(DireitoAoBeneficioDERReafirmada1;IF(BeneficioIntegralDERReafirmada1;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDERReafirmada1-TotalDiasTCMinimo)/360)*0,05)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDERReafirmada1/12)*0,01)+0,7;1);"")));"");""){% endhighlight %}
 
 
 ~~~
@@ -250,7 +250,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 * * *
 
 ##### **CoeficienteDERReafirmada2** `N12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);IF(DireitoAoBeneficioDERReafirmada2;IF(BeneficioIntegralDERReafirmada2;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDERReafirmada2-TotalDiasTCMinimo)/360)*0,06)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(CarenciaDERReafirmada2/12)*0,01)+0,7;1);"")));"");""){% endhighlight %}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);IF(DireitoAoBeneficioDERReafirmada2;IF(BeneficioIntegralDERReafirmada2;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDERReafirmada2-TotalDiasTCMinimo)/360)*0,05)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDERReafirmada2/12)*0,01)+0,7;1);"")));"");""){% endhighlight %}
 
 
 ~~~
@@ -276,7 +276,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 * * *
 
 ##### **CoeficienteDPL** `N9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(DireitoAoBeneficioDPL;IF(BeneficioIntegralDPL;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDPL-TotalDiasTCMinimo)/360)*0,06)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(CarenciaDPL/12)*0,01)+0,7;1))));""){% endhighlight %}
+{% highlight erlang %}=IF(DireitoAoBeneficioDPL;IF(BeneficioIntegralDPL;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDPL-TotalDiasTCMinimo)/360)*0,05)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDPL/12)*0,01)+0,7;1))));""){% endhighlight %}
 
 
 ~~~
@@ -387,7 +387,7 @@ d/m/yyyy
 * * *
 
 ##### **DireitoAoBeneficioDER** `L10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=OR(AND(Especie=42;IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaDER;TotalDiasDER>=TotalDiasTCMinimo);AND(Especie=41;IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaDER)){% endhighlight %}
+{% highlight erlang %}=OR(BeneficioIntegralDER;AND(Especie=42;IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaDER;TotalDiasDER>=TotalDiasTCMinimo);AND(Especie=41;IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaDER)){% endhighlight %}
 
 
 ~~~
@@ -402,7 +402,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 * * *
 
 ##### **DireitoAoBeneficioDERReafirmada1** `L11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);OR(AND(Especie=42;IdadeDERReafirmada1>=IdadeMinima;TotalCarenciaDERReafirmada1>=CarenciaDERReafirmada1;TotalDiasDERReafirmada1>=TotalDiasTCMinimo);AND(Especie=41;IdadeDERReafirmada1>=IdadeMinima;TotalCarenciaDERReafirmada1>=CarenciaDERReafirmada1));""){% endhighlight %}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);OR(BeneficioIntegralDERReafirmada1;AND(Especie=42;IdadeDERReafirmada1>=IdadeMinima;TotalCarenciaDERReafirmada1>=CarenciaDERReafirmada1;TotalDiasDERReafirmada1>=TotalDiasTCMinimo);AND(Especie=41;IdadeDERReafirmada1>=IdadeMinima;TotalCarenciaDERReafirmada1>=CarenciaDERReafirmada1));""){% endhighlight %}
 
 
 ~~~
@@ -415,7 +415,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 * * *
 
 ##### **DireitoAoBeneficioDERReafirmada2** `L12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);OR(AND(Especie=42;IdadeDERReafirmada2>=IdadeMinima;TotalCarenciaDERReafirmada2>=CarenciaDERReafirmada2;TotalDiasDERReafirmada2>=TotalDiasTCMinimo);AND(Especie=41;IdadeDERReafirmada2>=IdadeMinima;TotalCarenciaDERReafirmada2>=CarenciaDERReafirmada2));""){% endhighlight %}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);OR(BeneficioIntegralDERReafirmada2;AND(Especie=42;IdadeDERReafirmada2>=IdadeMinima;TotalCarenciaDERReafirmada2>=CarenciaDERReafirmada2;TotalDiasDERReafirmada2>=TotalDiasTCMinimo);AND(Especie=41;IdadeDERReafirmada2>=IdadeMinima;TotalCarenciaDERReafirmada2>=CarenciaDERReafirmada2));""){% endhighlight %}
 
 
 ~~~
@@ -441,7 +441,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 * * *
 
 ##### **DireitoAoBeneficioDPL** `L9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=OR(AND(Especie=42;IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaDPL;TotalDiasDPL>=TotalDiasTCMinimo);AND(Especie=41;IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaDPL)){% endhighlight %}
+{% highlight erlang %}=OR(BeneficioIntegralDPL;AND(Especie=42;IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaDPL;TotalDiasDPL>=TotalDiasTCMinimo);AND(Especie=41;IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaDPL)){% endhighlight %}
 
 
 ~~~

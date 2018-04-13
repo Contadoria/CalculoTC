@@ -1,7 +1,7 @@
 ---
 title: Processo
 category: Entrada
-order: 0
+order: 1
 ---
 
 ##### **Autor** `D6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
@@ -102,6 +102,35 @@ VALUE_IN_RANGE ListaBeneficios!A:A
 
 * * *
 
+##### **EspecieDescricao** `L6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(INDEX(ListaBeneficios!A:B;MATCH(Especie;ListaBeneficios!A:A;1);2);""){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **GrauDeficiencia** `K10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+
+
+~~~
+#,##0
+~~~
+
+
+~~~
+VALUE_IN_LIST 5 - Deficiência Grave,6 - Deficiência Moderada,7 - Deficiência Leve
+~~~
+
+
+
+* * *
+
 ##### **NB** `K5`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
 
@@ -168,8 +197,8 @@ VALUE_IN_LIST Homem,Mulher
 
 * * *
 
-##### **TCAposentadoriaIntegral** `K12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(TCAposentadoriaIntegralModificado);TCAposentadoriaIntegralModificado;IF(Especie=46;25;IF(Sexo="Homem";35;30))){% endhighlight %}
+##### **TCAposentadoriaIntegral** `K13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(TCAposentadoriaIntegralModificado);TCAposentadoriaIntegralModificado;(IF(ISTEXT(GrauDeficiencia);(VLOOKUP(GrauDeficiencia;TabelaConversao!A:C;IF(Sexo="Homem";2;3);FALSE));IF(Especie=46;25;IF(Sexo="Homem";35;30))))){% endhighlight %}
 
 
 ~~~
@@ -181,7 +210,7 @@ VALUE_IN_LIST Homem,Mulher
 
 * * *
 
-##### **TCAposentadoriaIntegralModificado** `L12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TCAposentadoriaIntegralModificado** `L13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
 
 ~~~
@@ -189,4 +218,3 @@ VALUE_IN_LIST Homem,Mulher
 ~~~
 
 
-> Inserir manualmente tempo de contribuição para aposentadoria integral.

@@ -1,7 +1,7 @@
 ---
 title: TCDiscriminado
 category: Entrada
-order: 2
+order: 3
 ---
 
 ##### **ClassificacaoTCInformado1** `H:H`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
@@ -20,12 +20,27 @@ VALUE_IN_RANGE TabelaConversao!A:A
 
 * * *
 
+##### **ContarCarenciaTCDiscriminado** `N:N`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+
+
+~~~
+0.###############
+~~~
+
+
+~~~
+VALUE_IN_LIST Sim,Não
+~~~
+
+
+
+* * *
+
 ##### **DataFinalTCDiscriminado** `D:D`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
 
 ~~~
 dd/MM/yyyy
-d/m/yyyy
 ~~~
 
 
@@ -120,7 +135,7 @@ Arredondamento até segunda casa consistente com Decreto 8.145/2013 (alterado em
 
 * * *
 
-##### **MotivosTCDiscriminado** `N:N`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **MotivosTCDiscriminado** `O:O`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
 
 ~~~
@@ -148,7 +163,7 @@ VALUE_IN_RANGE ListaMotivos!A:A
 
 * * *
 
-##### **ObservacoesTCDiscriminado** `O:O`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ObservacoesTCDiscriminado** `P:P`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
 
 ~~~

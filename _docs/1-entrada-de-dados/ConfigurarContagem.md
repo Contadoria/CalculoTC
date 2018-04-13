@@ -1,7 +1,7 @@
 ---
 title: ConfigurarContagem
 category: Entrada
-order: 1
+order: 2
 ---
 
 ##### **AjustarMarcosTemporais** `H6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}

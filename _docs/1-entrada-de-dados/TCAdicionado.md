@@ -1,7 +1,7 @@
 ---
 title: TCAdicionado
 category: Entrada
-order: 3
+order: 4
 ---
 
 ##### **AnosAdicionados** `B:B`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
@@ -269,7 +269,7 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **MotivosTCAdicionadoDemonstrativo** `X:X`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ARRAYFORMULA(IF(ROW(MotivosTCAdicionadoDemonstrativo)=1;"Motivos Demonstrativo";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(MotivosTCAdicionado="";" ";MID(MotivosTCAdicionado;5;100));""))){% endhighlight %}
+{% highlight erlang %}=ARRAYFORMULA(IF(ROW(MotivosTCAdicionadoDemonstrativo)=1;"Motivos Demonstrativo";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(MotivosTCAdicionado="";" ";"["&MID(MotivosTCAdicionado;1;1)&"]");""))){% endhighlight %}
 
 
 
@@ -290,7 +290,7 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **ObservacoesTCAdicionadoDemonstrativo** `Y:Y`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ARRAYFORMULA(IF(ROW(ObservacoesTCAdicionadoDemonstrativo)=1;"Observacoes Demonstrativo";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(ObservacoesTCAdicionado="";"";"Seq. "&ROW(ObservacoesTCAdicionado)&". "&ObservacoesTCAdicionado);""))){% endhighlight %}
+{% highlight erlang %}=ARRAYFORMULA(IF(ROW(ObservacoesTCAdicionadoDemonstrativo)=1;"Observacoes Demonstrativo";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(ObservacoesTCAdicionado="";"";ObservacoesTCAdicionado);""))){% endhighlight %}
 
 
 
@@ -299,11 +299,11 @@ VALUE_IN_RANGE ListaMotivos!A:A
 * * *
 
 ##### **ReferenciaFatorTCAdicionado** `L:L`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ARRAYFORMULA(IF(ROW(ReferenciaFatorTCAdicionado)=1;"Referência";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(ClassificacaoTCAdicionado<>"";VLOOKUP(ClassificacaoTCAdicionado;TabelaConversao!A:B;IF(Sexo="Homem";2;3);FALSE);VLOOKUP("1 - Comum";TabelaConversao!A:B;IF(Sexo="Homem";2;3);FALSE));""))){% endhighlight %}
+{% highlight erlang %}=ARRAYFORMULA(IF(ROW(ReferenciaFatorTCAdicionado)=1;"Referência";IF(AnosTCAdicionadoDemonstrativo+MesesTCAdicionadoDemonstrativo+DiasTCAdicionadoDemonstrativo;IF(ClassificacaoTCAdicionado<>"";VLOOKUP(ClassificacaoTCAdicionado;TabelaConversao!A:C;IF(Sexo="Homem";2;3);FALSE);VLOOKUP("1 - Comum";TabelaConversao!A:C;IF(Sexo="Homem";2;3);FALSE));""))){% endhighlight %}
 
 
 
-
+> Alteração em 17/12/2017 (por cmlima): alterada referência à página `TabelaConversao` de `A:B` para `A:C`, a fim de eliminar bug em que a fórmula `PROCV` não retornava valores para o caso de `Sexo="Mulher"` 
 
 * * *
 

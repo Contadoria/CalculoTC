@@ -4,7 +4,7 @@ category: Processamento
 order: 2
 ---
 
-##### **DadosObrigatoriosFaltantes** `B28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **DadosObrigatoriosFaltantes** `B29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(LEN(Sexo)>0;"";"Sexo#")& IF(ISNUMBER(DataNascimento);"";"Nascimento#")&IF(ISNUMBER(Especie);"";"Espécie#")&IF(ISNUMBER(DER);"";"DER#"){% endhighlight %}
 
 
@@ -40,6 +40,19 @@ order: 2
 
 
 > Observações dos períodos discriminados para demonstrativo
+
+* * *
+
+##### **TemMotivos** `B26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=LEN(TRIM(JOIN("";OFFSET(MotivosTCDiscriminadoDemonstrativo;1;0);OFFSET(MotivosTCAdicionadoDemonstrativo;1;0))))>0{% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
 
 * * *
 

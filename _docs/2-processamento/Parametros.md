@@ -4,6 +4,19 @@ category: Processamento
 order: 1
 ---
 
+##### **CarenciaExigida** `B11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(MID(MarcoCarencia;1;1)="1";CarenciaMinimaIdade;CarenciaMinimaDER){% endhighlight %}
+
+
+~~~
+0
+~~~
+
+
+
+
+* * *
+
 ##### **CarenciaMinimaDER** `B8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IFERROR(IF(MIN(DataInicialTCDiscriminadoProcessado)>=DLB;180;INDEX(TabelaCarencia!A:B;MATCH(YEAR(DER-1);TabelaCarencia!A:A;1);2));180){% endhighlight %}
 
@@ -95,7 +108,7 @@ mm"/"yyyy
 
 * * *
 
-##### **DireitoAdquiridoDPE** `B12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **DireitoAdquiridoDPE** `B13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=AND(TotalCarenciaDPE>=CarenciaDPE;TotalDiasDPE>=TotalDiasTCMinimoDPE){% endhighlight %}
 
 
@@ -121,7 +134,7 @@ mm"/"yyyy
 
 * * *
 
-##### **PontuacaoMinimaDER** `B14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **PontuacaoMinimaDER** `B15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(AND(Especie=42;DER>=VigenciaPontos);INDEX(TabelaPontuacao!A:C;MATCH(DER-1;TabelaPontuacao!A:A;1);IF(Sexo="Homem";2;3));"não se aplica"){% endhighlight %}
 
 
@@ -134,33 +147,25 @@ mm"/"yyyy
 
 * * *
 
-##### **PontuacaoMinimaDERReafirmada1** `B15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **PontuacaoMinimaDERReafirmada1** `B16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(AND(Especie=42;DERReafirmada1>=VigenciaPontos);INDEX(TabelaPontuacao!A:C;MATCH(DERReafirmada1-1;TabelaPontuacao!A:A;1);IF(Sexo="Homem";2;3));"não se aplica"){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 > Pontuação mínima necessária na primeira data reafirmada para possibilitar exclusão do fator previdenciário
 
 * * *
 
-##### **PontuacaoMinimaDERReafirmada2** `B16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **PontuacaoMinimaDERReafirmada2** `B17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(AND(Especie=42;DERReafirmada2>=VigenciaPontos);INDEX(TabelaPontuacao!A:C;MATCH(DERReafirmada2-1;TabelaPontuacao!A:A;1);IF(Sexo="Homem";2;3));"não se aplica"){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 > Pontuação mínima necessária na segunda data reafirmada para possibilitar exclusão do fator previdenciário
 
 * * *
 
-##### **TotalDiasTCMinimo** `B13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalDiasTCMinimo** `B14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(Especie=42;IF(ComputarPedagio;MIN(TotalDiasDPE+TotalDiasFaltantesComPedagio;IF(Sexo="Homem";35*360;30*360));IF(DireitoAdquiridoDPE;IF(Sexo="Homem";30*360;25*360);TCAposentadoriaIntegral*360));TCAposentadoriaIntegral*360){% endhighlight %}
 
 
@@ -173,7 +178,7 @@ mm"/"yyyy
 
 * * *
 
-##### **TotalDiasTCMinimoDPE** `B11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalDiasTCMinimoDPE** `B12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(Especie=42;IF(Sexo="Homem";30*360;25*360);0){% endhighlight %}
 
 

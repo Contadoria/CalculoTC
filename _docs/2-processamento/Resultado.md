@@ -1,10 +1,10 @@
 ---
 title: Resultado
 category: Processamento
-order: 3
+order: 2
 ---
 
-##### **AnosAcrescimoTempoEspecial** `F9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **AnosAcrescimoTempoEspecial** `F20`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ROUNDDOWN(TotalAcrescimoTempoEspecial/360){% endhighlight %}
 
 
@@ -17,8 +17,8 @@ order: 3
 
 * * *
 
-##### **AnosDER** `F16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(E16/360){% endhighlight %}
+##### **AnosDER** `F27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(E27/360){% endhighlight %}
 
 
 ~~~
@@ -26,12 +26,12 @@ order: 3
 ~~~
 
 
-> Anos apurados para efeito de tempo de contribuição até a primeira data reafirmada
+
 
 * * *
 
-##### **AnosDERReafirmada1** `F17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(E17);ROUNDDOWN(E17/360);""){% endhighlight %}
+##### **AnosDERReafirmada1** `F28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(E28);ROUNDDOWN(E28/360);""){% endhighlight %}
 
 
 ~~~
@@ -43,8 +43,8 @@ order: 3
 
 * * *
 
-##### **AnosDERReafirmada2** `F18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(E18);ROUNDDOWN(E18/360);""){% endhighlight %}
+##### **AnosDERReafirmada2** `F29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(E29);ROUNDDOWN(E29/360);""){% endhighlight %}
 
 
 ~~~
@@ -56,8 +56,8 @@ order: 3
 
 * * *
 
-##### **AnosDPE** `F11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(E11/360){% endhighlight %}
+##### **AnosDPE** `F22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(E22/360){% endhighlight %}
 
 
 ~~~
@@ -69,8 +69,8 @@ order: 3
 
 * * *
 
-##### **AnosDPL** `F15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(E15/360){% endhighlight %}
+##### **AnosDPL** `F26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(E26/360){% endhighlight %}
 
 
 ~~~
@@ -82,8 +82,8 @@ order: 3
 
 * * *
 
-##### **AnosFaltantesComPedagio** `F13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(E13/360){% endhighlight %}
+##### **AnosFaltantesComPedagio** `F24`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(E24/360){% endhighlight %}
 
 
 ~~~
@@ -95,8 +95,8 @@ order: 3
 
 * * *
 
-##### **AnosPedagio** `F12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(E12/360){% endhighlight %}
+##### **AnosPedagio** `F23`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(E23/360){% endhighlight %}
 
 
 ~~~
@@ -108,8 +108,8 @@ order: 3
 
 * * *
 
-##### **AnosTCMinimo** `F14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(E14/360){% endhighlight %}
+##### **AnosTCMinimo** `F25`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(E25/360){% endhighlight %}
 
 
 ~~~
@@ -121,7 +121,7 @@ order: 3
 
 * * *
 
-##### **BeneficioIntegralDER** `M16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **BeneficioIntegralDER** `M27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=OR(AND(Especie=42;TotalDiasDER>=TCAposentadoriaIntegral*360);AND(Especie=41;CarenciaDER>=360)){% endhighlight %}
 
 
@@ -134,7 +134,7 @@ order: 3
 
 * * *
 
-##### **BeneficioIntegralDERReafirmada1** `M17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **BeneficioIntegralDERReafirmada1** `M28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);OR(AND(Especie=42;TotalDiasDERReafirmada1>=TCAposentadoriaIntegral*360);AND(Especie=41;CarenciaDERReafirmada1>=360));""){% endhighlight %}
 
 
@@ -147,7 +147,7 @@ order: 3
 
 * * *
 
-##### **BeneficioIntegralDERReafirmada2** `M18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **BeneficioIntegralDERReafirmada2** `M29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);OR(AND(Especie=42;TotalDiasDERReafirmada2>=TCAposentadoriaIntegral*360);AND(Especie=41;CarenciaDERReafirmada2>=360));""){% endhighlight %}
 
 
@@ -160,7 +160,7 @@ order: 3
 
 * * *
 
-##### **BeneficioIntegralDPE** `M11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **BeneficioIntegralDPE** `M22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=OR(AND(Especie=42;TotalDiasDPE>=TCAposentadoriaIntegral*360);AND(Especie=41;CarenciaDPE>=360)){% endhighlight %}
 
 
@@ -173,7 +173,7 @@ order: 3
 
 * * *
 
-##### **BeneficioIntegralDPL** `M15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **BeneficioIntegralDPL** `M26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=OR(AND(Especie=42;TotalDiasDPL>=TCAposentadoriaIntegral*360);AND(Especie=41;CarenciaDPL>=360)){% endhighlight %}
 
 
@@ -187,7 +187,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **CarenciaDER** `I16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **CarenciaDER** `I27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<="&DER;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<="&DER;CarenciaTCAdicionado){% endhighlight %}
 
 
@@ -196,33 +196,25 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **CarenciaDERReafirmada1** `I17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **CarenciaDERReafirmada1** `I28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada1;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<"&DERReafirmada1;CarenciaTCAdicionado);""){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 > Carência (número de contribuições) apuradas até a segunda data reafirmada
 
 * * *
 
-##### **CarenciaDERReafirmada2** `I18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **CarenciaDERReafirmada2** `I29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);SUMIF(DataFinalTCDiscriminadoProcessado;"<="&DERReafirmada2;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<="&DERReafirmada2;CarenciaTCAdicionado);""){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 
 
 * * *
 
-##### **CarenciaDPE** `I11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **CarenciaDPE** `I22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPEMaisUm;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<"&DPEMaisUm;CarenciaTCAdicionado){% endhighlight %}
 
 
@@ -231,7 +223,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **CarenciaDPL** `I15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **CarenciaDPL** `I26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPL;CarenciaTCDiscriminado)+SUMIF(LimitesTCAdicionado;"<"&DPL;CarenciaTCAdicionado){% endhighlight %}
 
 
@@ -242,8 +234,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **CoeficienteDER** `N16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(DireitoAoBeneficioDER;IF(BeneficioIntegralDER;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDER-TotalDiasTCMinimo)/360)*0,05)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDER/12)*0,01)+0,7;1))));""){% endhighlight %}
+##### **CoeficienteDER** `N27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(AjustarMarcosTemporais="Não";"";IF(ISNUMBER(INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7));INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7);IF(DireitoAoBeneficioDER;IF(Especie=42;IF(BeneficioIntegralDER;1;MIN((ROUNDDOWN((TotalDiasDER-TotalDiasTCMinimo)/360)*0,05)+0,7;1));IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDER/12)*0,01)+0,7;1);""));""))){% endhighlight %}
 
 
 ~~~
@@ -255,8 +247,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **CoeficienteDERReafirmada1** `N17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);IF(DireitoAoBeneficioDERReafirmada1;IF(BeneficioIntegralDERReafirmada1;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDERReafirmada1-TotalDiasTCMinimo)/360)*0,05)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDERReafirmada1/12)*0,01)+0,7;1);"")));"");""){% endhighlight %}
+##### **CoeficienteDERReafirmada1** `N28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);IF(ISNUMBER(INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7));INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7);IF(ISNUMBER(DERReafirmada1);IF(DireitoAoBeneficioDERReafirmada1;IF(Especie=42;IF(BeneficioIntegralDERReafirmada1;1;MIN((ROUNDDOWN((TotalDiasDERReafirmada1-TotalDiasTCMinimo)/360)*0,05)+0,7;1));IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDERReafirmada1/12)*0,01)+0,7;1);""));"");""));""){% endhighlight %}
 
 
 ~~~
@@ -268,8 +260,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **CoeficienteDERReafirmada2** `N18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);IF(DireitoAoBeneficioDERReafirmada2;IF(BeneficioIntegralDERReafirmada2;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDERReafirmada2-TotalDiasTCMinimo)/360)*0,05)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDERReafirmada2/12)*0,01)+0,7;1);"")));"");""){% endhighlight %}
+##### **CoeficienteDERReafirmada2** `N29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);IF(ISNUMBER(INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7));INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7);IF(ISNUMBER(DERReafirmada2);IF(DireitoAoBeneficioDERReafirmada2;IF(Especie=42;IF(BeneficioIntegralDERReafirmada2;1;MIN((ROUNDDOWN((TotalDiasDERReafirmada2-TotalDiasTCMinimo)/360)*0,05)+0,7;1));IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDERReafirmada2/12)*0,01)+0,7;1);""));"");""));""){% endhighlight %}
 
 
 ~~~
@@ -281,8 +273,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **CoeficienteDPE** `N11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(AND(Especie=42;DireitoAoBeneficioDPE);IF(BeneficioIntegralDPE;1;MIN((ROUNDDOWN((TotalDiasDPE-TotalDiasTCMinimoDPE)/360)*0,06)+0,7;1));""){% endhighlight %}
+##### **CoeficienteDPE** `N22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7));INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7);IF(DireitoAoBeneficioDPE;IF(Especie=42;IF(BeneficioIntegralDPE;1;MIN((ROUNDDOWN((TotalDiasDPE-TotalDiasTCMinimoDPE)/360)*0,06)+0,7;1));IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDER/12)*0,01)+0,7;1);""));"")){% endhighlight %}
 
 
 ~~~
@@ -294,8 +286,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **CoeficienteDPL** `N15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(DireitoAoBeneficioDPL;IF(BeneficioIntegralDPL;1;IF(Especie=42;MIN((ROUNDDOWN((TotalDiasDPL-TotalDiasTCMinimo)/360)*0,05)+0,7;1);IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDPL/12)*0,01)+0,7;1))));""){% endhighlight %}
+##### **CoeficienteDPL** `N26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7));INDEX(ListaBeneficios!A:G;MATCH(Especie;ListaBeneficios!A:A;0);7);IF(DireitoAoBeneficioDPL;IF(Especie=42;IF(BeneficioIntegralDPL;1;MIN((ROUNDDOWN((TotalDiasDPL-TotalDiasTCMinimo)/360)*0,05)+0,7;1));IF(Especie=41;MIN((ROUNDDOWN(TotalCarenciaDER/12)*0,01)+0,7;1);""));"")){% endhighlight %}
 
 
 ~~~
@@ -303,13 +295,13 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 ~~~
 
 
-> Coeficiente de cálculo apurado na DER.
-Substituído (ARREDONDAR.PARA.BAIXO(TotalDiasDER/360)-ARREDONDAR.PARA.BAIXO(TotalDiasTCMinimo/360)) por ARREDONDAR.PARA.BAIXO((TotalDIasDER-TotalDiasMinimo)/360) (alterado em 20/10/2017).
-Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
+> Coeficiente de cálculo apurado na DPL
+Substituído (ARREDONDAR.PARA.BAIXO(TotalDiasDPL/360)-ARREDONDAR.PARA.BAIXO(TotalDiasTCMinimo/360)) por ARREDONDAR.PARA.BAIXO((TotalDIasDPL-TotalDiasMinimo)/360)
+Alterado em 20/10/2017
 
 * * *
 
-##### **DPE** `B11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **DPE** `B22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 
 
 ~~~
@@ -321,7 +313,7 @@ dd/MM/yyyy
 
 * * *
 
-##### **DiasAcrescimoTempoEspecial** `H9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **DiasAcrescimoTempoEspecial** `H20`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=TotalAcrescimoTempoEspecial-(AnosAcrescimoTempoEspecial*360)-(MesesAcrescimoTempoEspecial*30){% endhighlight %}
 
 
@@ -330,43 +322,35 @@ dd/MM/yyyy
 
 * * *
 
-##### **DiasDER** `H16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=E16-(F16*360)-(G16*30){% endhighlight %}
+##### **DiasDER** `H27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=E27-(F27*360)-(G27*30){% endhighlight %}
 
 
 
-> Dias apurados para efeito de tempo de contribuição até a primeira data reafirmada
+
 
 * * *
 
-##### **DiasDERReafirmada1** `H17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(E17);E17-(F17*360)-(G17*30);""){% endhighlight %}
+##### **DiasDERReafirmada1** `H28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(E28);E28-(F28*360)-(G28*30);""){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 > Dias apurados para efeito de tempo de contribuição até a segunda data reafirmada
 
 * * *
 
-##### **DiasDERReafirmada2** `H18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(E18);E18-(F18*360)-(G18*30);""){% endhighlight %}
+##### **DiasDERReafirmada2** `H29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(E29);E29-(F29*360)-(G29*30);""){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 
 
 * * *
 
-##### **DiasDPE** `H11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=E11-(F11*360)-(G11*30){% endhighlight %}
+##### **DiasDPE** `H22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=E22-(F22*360)-(G22*30){% endhighlight %}
 
 
 
@@ -374,8 +358,8 @@ dd/MM/yyyy
 
 * * *
 
-##### **DiasDPL** `H15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=E15-(F15*360)-(G15*30){% endhighlight %}
+##### **DiasDPL** `H26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=E26-(F26*360)-(G26*30){% endhighlight %}
 
 
 
@@ -383,8 +367,8 @@ dd/MM/yyyy
 
 * * *
 
-##### **DiasFaltantesPedagio** `H13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(E13-(F13*360)-(G13*30)){% endhighlight %}
+##### **DiasFaltantesPedagio** `H24`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(E24-(F24*360)-(G24*30)){% endhighlight %}
 
 
 ~~~
@@ -396,8 +380,8 @@ dd/MM/yyyy
 
 * * *
 
-##### **DiasPedagio** `H12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(E12-(F12*360)-(G12*30)){% endhighlight %}
+##### **DiasPedagio** `H23`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(E23-(F23*360)-(G23*30)){% endhighlight %}
 
 
 ~~~
@@ -409,8 +393,8 @@ dd/MM/yyyy
 
 * * *
 
-##### **DiasTCMinimo** `H14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(E14-(F14*360)-(G14*30)){% endhighlight %}
+##### **DiasTCMinimo** `H25`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(E25-(F25*360)-(G25*30)){% endhighlight %}
 
 
 ~~~
@@ -422,8 +406,8 @@ dd/MM/yyyy
 
 * * *
 
-##### **DireitoAoBeneficioDER** `L16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=OR(BeneficioIntegralDER;AND(Especie=42;IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaDER;TotalDiasDER>=TotalDiasTCMinimo);AND(Especie=41;IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaMinimaDER)){% endhighlight %}
+##### **DireitoAoBeneficioDER** `L27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=OR(BeneficioIntegralDER;AND(Especie=42;IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaExigida;TotalDiasDER>=TotalDiasTCMinimo);AND(Especie=41;IdadeDER>=IdadeMinima;TotalCarenciaDER>=CarenciaExigida)){% endhighlight %}
 
 
 ~~~
@@ -435,8 +419,8 @@ dd/MM/yyyy
 
 * * *
 
-##### **DireitoAoBeneficioDERReafirmada1** `L17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);OR(BeneficioIntegralDERReafirmada1;AND(Especie=42;IdadeDERReafirmada1>=IdadeMinima;TotalCarenciaDERReafirmada1>=CarenciaDERReafirmada1;TotalDiasDERReafirmada1>=TotalDiasTCMinimo);AND(Especie=41;IdadeDERReafirmada1>=IdadeMinima;TotalCarenciaDERReafirmada1>=CarenciaMinimaDERReafirmada1));""){% endhighlight %}
+##### **DireitoAoBeneficioDERReafirmada1** `L28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);OR(BeneficioIntegralDERReafirmada1;AND(Especie=42;IdadeDERReafirmada1>=IdadeMinima;TotalCarenciaDERReafirmada1>=CarenciaExigida;TotalDiasDERReafirmada1>=TotalDiasTCMinimo);AND(Especie=41;IdadeDERReafirmada1>=IdadeMinima;TotalCarenciaDERReafirmada1>=CarenciaExigida));""){% endhighlight %}
 
 
 ~~~
@@ -448,8 +432,8 @@ dd/MM/yyyy
 
 * * *
 
-##### **DireitoAoBeneficioDERReafirmada2** `L18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);OR(BeneficioIntegralDERReafirmada2;AND(Especie=42;IdadeDERReafirmada2>=IdadeMinima;TotalCarenciaDERReafirmada2>=CarenciaDERReafirmada2;TotalDiasDERReafirmada2>=TotalDiasTCMinimo);AND(Especie=41;IdadeDERReafirmada2>=IdadeMinima;TotalCarenciaDERReafirmada2>=CarenciaMinimaDERReafirmada2));""){% endhighlight %}
+##### **DireitoAoBeneficioDERReafirmada2** `L29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);OR(BeneficioIntegralDERReafirmada2;AND(Especie=42;IdadeDERReafirmada2>=IdadeMinima;TotalCarenciaDERReafirmada2>=CarenciaExigida;TotalDiasDERReafirmada2>=TotalDiasTCMinimo);AND(Especie=41;IdadeDERReafirmada2>=IdadeMinima;TotalCarenciaDERReafirmada2>=CarenciaExigida));""){% endhighlight %}
 
 
 ~~~
@@ -461,7 +445,7 @@ dd/MM/yyyy
 
 * * *
 
-##### **DireitoAoBeneficioDPE** `L11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **DireitoAoBeneficioDPE** `L22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=AND(Especie=42;IdadeDPE>=IdadeMinima;TotalCarenciaDPE>=CarenciaMinimaDPE;TotalDiasDPE>=TotalDiasTCMinimo){% endhighlight %}
 
 
@@ -474,8 +458,8 @@ dd/MM/yyyy
 
 * * *
 
-##### **DireitoAoBeneficioDPL** `L15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=OR(BeneficioIntegralDPL;AND(Especie=42;IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaDPL;TotalDiasDPL>=TotalDiasTCMinimo);AND(Especie=41;IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaMinimaDPL)){% endhighlight %}
+##### **DireitoAoBeneficioDPL** `L26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=OR(BeneficioIntegralDPL;AND(Especie=42;IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaExigida;TotalDiasDPL>=TotalDiasTCMinimo);AND(Especie=41;IdadeDPL>=IdadeMinima;TotalCarenciaDPL>=CarenciaExigida)){% endhighlight %}
 
 
 ~~~
@@ -489,8 +473,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **IdadeDER** `C16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=DAYS360(DataNascimento;DER-1)/360{% endhighlight %}
+##### **IdadeDER** `C27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=DAYS360(DataNascimento;DER)/360{% endhighlight %}
 
 
 ~~~
@@ -502,8 +486,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **IdadeDERReafirmada1** `C17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);DAYS360(DataNascimento;DERReafirmada1-1)/360;""){% endhighlight %}
+##### **IdadeDERReafirmada1** `C28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);DAYS360(DataNascimento;DERReafirmada1)/360;""){% endhighlight %}
 
 
 ~~~
@@ -515,8 +499,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **IdadeDERReafirmada2** `C18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);DAYS360(DataNascimento;DERReafirmada2-1)/360;""){% endhighlight %}
+##### **IdadeDERReafirmada2** `C29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);DAYS360(DataNascimento;DERReafirmada2)/360;""){% endhighlight %}
 
 
 ~~~
@@ -528,7 +512,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **IdadeDPE** `C11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **IdadeDPE** `C22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=DAYS360(DataNascimento;DPE)/360{% endhighlight %}
 
 
@@ -541,7 +525,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **IdadeDPL** `C15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **IdadeDPL** `C26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=DAYS360(DataNascimento;DPL-1)/360{% endhighlight %}
 
 
@@ -554,7 +538,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **MesesAcrescimoTempoEspecial** `G9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **MesesAcrescimoTempoEspecial** `G20`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ROUNDDOWN((TotalAcrescimoTempoEspecial-(AnosAcrescimoTempoEspecial*360))/30){% endhighlight %}
 
 
@@ -567,8 +551,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **MesesDER** `G16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN((E16-(F16*360))/30){% endhighlight %}
+##### **MesesDER** `G27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((E27-(F27*360))/30){% endhighlight %}
 
 
 ~~~
@@ -576,12 +560,12 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 ~~~
 
 
-> Meses apurados para efeito de tempo de contribuição até a primeira data reafirmada
+
 
 * * *
 
-##### **MesesDERReafirmada1** `G17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(E17);ROUNDDOWN((E17-(F17*360))/30);""){% endhighlight %}
+##### **MesesDERReafirmada1** `G28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(E28);ROUNDDOWN((E28-(F28*360))/30);""){% endhighlight %}
 
 
 ~~~
@@ -593,8 +577,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **MesesDERReafirmada2** `G18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(E18);ROUNDDOWN((E18-(F18*360))/30);""){% endhighlight %}
+##### **MesesDERReafirmada2** `G29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(E29);ROUNDDOWN((E29-(F29*360))/30);""){% endhighlight %}
 
 
 ~~~
@@ -606,8 +590,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **MesesDPE** `G11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN((E11-(F11*360))/30){% endhighlight %}
+##### **MesesDPE** `G22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((E22-(F22*360))/30){% endhighlight %}
 
 
 ~~~
@@ -619,8 +603,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **MesesDPL** `G15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN((E15-(F15*360))/30){% endhighlight %}
+##### **MesesDPL** `G26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((E26-(F26*360))/30){% endhighlight %}
 
 
 ~~~
@@ -632,8 +616,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **MesesFaltantesComPedagio** `G13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN((E13-(F13*360))/30){% endhighlight %}
+##### **MesesFaltantesComPedagio** `G24`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((E24-(F24*360))/30){% endhighlight %}
 
 
 ~~~
@@ -645,8 +629,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **MesesPedagio** `G12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN((E12-(F12*360))/30){% endhighlight %}
+##### **MesesPedagio** `G23`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((E23-(F23*360))/30){% endhighlight %}
 
 
 ~~~
@@ -658,8 +642,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **MesesTCMinimo** `G14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN((E14-(F14*360))/30){% endhighlight %}
+##### **MesesTCMinimo** `G25`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((E25-(F25*360))/30){% endhighlight %}
 
 
 ~~~
@@ -671,8 +655,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **PontosDER** `D16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(AND(Especie=42;DER>=VigenciaPontos);(TotalDiasDER/360)+IdadeDER;""){% endhighlight %}
+##### **PontosDER** `D27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(AND(OR(Especie=42;Especie=57);DER>=VigenciaPontos);(TotalDiasDER/360)+IdadeDER+IF(Especie=57;5;0);""){% endhighlight %}
 
 
 ~~~
@@ -684,8 +668,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **PontosDERReafirmada1** `D17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(AND(Especie=42;DERReafirmada1>=VigenciaPontos);(TotalDiasDER/360)+IdadeDERReafirmada1;""){% endhighlight %}
+##### **PontosDERReafirmada1** `D28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(AND(OR(Especie=42;Especie=57);DERReafirmada1>=VigenciaPontos);(TotalDiasDERReafirmada1/360)+IdadeDERReafirmada1+IF(Especie=57;5;0);""){% endhighlight %}
 
 
 ~~~
@@ -697,8 +681,47 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **PontosDERReafirmada2** `D18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(AND(Especie=42;DERReafirmada2>=VigenciaPontos);(TotalDiasDER/360)+IdadeDERReafirmada2;""){% endhighlight %}
+##### **PontosDERReafirmada2** `D29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(AND(OR(Especie=42;Especie=57);DERReafirmada2>=VigenciaPontos);(TotalDiasDERReafirmada2/360)+IdadeDERReafirmada2+IF(Especie=57;5;0);""){% endhighlight %}
+
+
+~~~
+0
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoAnosBIAcidentario** `F15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasBIAcidentario/360){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoAnosBIIntercalado** `F16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasBIIntercalado/360){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoAnosBINaoIntercalado** `F17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasBINaoIntercalado/360){% endhighlight %}
 
 
 ~~~
@@ -736,7 +759,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoAnosTCComum** `F6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoAnosTCComum** `F8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCComum/360){% endhighlight %}
 
 
@@ -749,7 +772,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoAnosTCComumEspecial** `F8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoAnosTCComumEspecial** `F19`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCComumEspecial/360){% endhighlight %}
 
 
@@ -762,8 +785,47 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoAnosTCConvertido** `F10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoAnosTCConvertido** `F21`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCConvertido/360){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoAnosTCDeficienciaGrave** `F14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCDeficienciaGrave/360){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoAnosTCDeficienciaLeve** `F12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCDeficienciaLeve/360){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoAnosTCDeficienciaModerada** `F13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCDeficienciaModerada/360){% endhighlight %}
 
 
 ~~~
@@ -801,8 +863,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoAnosTCEspecial** `F7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCEspecial/360){% endhighlight %}
+##### **ResultadoAnosTCEspecial15** `F9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCEspecial15/360){% endhighlight %}
 
 
 ~~~
@@ -814,7 +876,46 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoCarenciaSimples** `I8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoAnosTCEspecial20** `F10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCEspecial20/360){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoAnosTCEspecial25** `F11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCEspecial25/360){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoAnosTCNaoComputado** `F7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN(ResultadoTotalDiasTCNaoComputado/360){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoCarenciaSimples** `I19`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUM(CarenciaTCDiscriminado;CarenciaTCAdicionado){% endhighlight %}
 
 
@@ -825,6 +926,33 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 ##### **ResultadoCarenciaTCDiscriminado** `I2`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUM(CarenciaTCDiscriminado){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoDiasBIAcidentario** `H15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasBIAcidentario-(ResultadoAnosBIAcidentario*360)-(ResultadoMesesBIAcidentario*30){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoDiasBIIntercalado** `H16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasBIIntercalado-(ResultadoAnosBIIntercalado*360)-(ResultadoMesesBIIntercalado*30){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoDiasBINaoIntercalado** `H17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasBINaoIntercalado-(ResultadoAnosBINaoIntercalado*360)-(ResultadoMesesBINaoIntercalado*30){% endhighlight %}
 
 
 
@@ -850,7 +978,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoDiasTCComum** `H6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoDiasTCComum** `H8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ResultadoTotalDiasTCComum-(ResultadoAnosTCComum*360)-(ResultadoMesesTCComum*30){% endhighlight %}
 
 
@@ -859,7 +987,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoDiasTCComumEspecial** `H8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoDiasTCComumEspecial** `H19`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ResultadoTotalDiasTCComumEspecial-(ResultadoAnosTCComumEspecial*360)-(ResultadoMesesTCComumEspecial*30){% endhighlight %}
 
 
@@ -868,8 +996,35 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoDiasTCConvertido** `H10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoDiasTCConvertido** `H21`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ResultadoTotalDiasTCConvertido-(ResultadoAnosTCConvertido*360)-(ResultadoMesesTCConvertido*30){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoDiasTCDeficienciaGrave** `H14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasTCDeficienciaGrave-(ResultadoAnosTCDeficienciaGrave*360)-(ResultadoMesesTCDeficienciaGrave*30){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoDiasTCDeficienciaLeve** `H12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasTCDeficienciaLeve-(ResultadoAnosTCDeficienciaLeve*360)-(ResultadoMesesTCDeficienciaLeve*30){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoDiasTCDeficienciaModerada** `H13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasTCDeficienciaModerada-(ResultadoAnosTCDeficienciaModerada*360)-(ResultadoMesesTCDeficienciaModerada*30){% endhighlight %}
 
 
 
@@ -895,12 +1050,74 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoDiasTCEspecial** `H7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ResultadoTotalDiasTCEspecial-(ResultadoAnosTCEspecial*360)-(ResultadoMesesTCEspecial*30){% endhighlight %}
+##### **ResultadoDiasTCEspecial15** `H9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasTCEspecial15-(ResultadoAnosTCEspecial15*360)-(ResultadoMesesTCEspecial15*30){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoDiasTCEspecial20** `H10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasTCEspecial20-(ResultadoAnosTCEspecial20*360)-(ResultadoMesesTCEspecial20*30){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoDiasTCEspecial25** `H11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasTCEspecial25-(ResultadoAnosTCEspecial25*360)-(ResultadoMesesTCEspecial25*30){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoDiasTCNaoComputado** `H7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ResultadoTotalDiasTCNaoComputado-(ResultadoAnosTCNaoComputado*360)-(ResultadoMesesTCNaoComputado*30){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **ResultadoMesesBIAcidentario** `G15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasBIAcidentario-(ResultadoAnosBIAcidentario*360))/30){% endhighlight %}
 
 
 ~~~
-0
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoMesesBIIntercalado** `G16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasBIIntercalado-(ResultadoAnosBIIntercalado*360))/30){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoMesesBINaoIntercalado** `G17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasBINaoIntercalado-(ResultadoAnosBINaoIntercalado*360))/30){% endhighlight %}
+
+
+~~~
+0.###############
 ~~~
 
 
@@ -934,7 +1151,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoMesesTCComum** `G6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoMesesTCComum** `G8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCComum-(ResultadoAnosTCComum*360))/30){% endhighlight %}
 
 
@@ -947,7 +1164,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoMesesTCComumEspecial** `G8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoMesesTCComumEspecial** `G19`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCComumEspecial-(ResultadoAnosTCComumEspecial*360))/30){% endhighlight %}
 
 
@@ -960,8 +1177,47 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoMesesTCConvertido** `G10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoMesesTCConvertido** `G21`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCConvertido-(ResultadoAnosTCConvertido*360))/30){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoMesesTCDeficienciaGrave** `G14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCDeficienciaGrave-(ResultadoAnosTCDeficienciaGrave*360))/30){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoMesesTCDeficienciaLeve** `G12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCDeficienciaLeve-(ResultadoAnosTCDeficienciaLeve*360))/30){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoMesesTCDeficienciaModerada** `G13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCDeficienciaModerada-(ResultadoAnosTCDeficienciaModerada*360))/30){% endhighlight %}
 
 
 ~~~
@@ -999,8 +1255,8 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoMesesTCEspecial** `G7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCEspecial-(ResultadoAnosTCEspecial*360))/30){% endhighlight %}
+##### **ResultadoMesesTCEspecial15** `G9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCEspecial15-(ResultadoAnosTCEspecial15*360))/30){% endhighlight %}
 
 
 ~~~
@@ -1012,9 +1268,93 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoTotalCarencia** `K8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoMesesTCEspecial20** `G10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCEspecial20-(ResultadoAnosTCEspecial20*360))/30){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoMesesTCEspecial25** `G11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCEspecial25-(ResultadoAnosTCEspecial25*360))/30){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoMesesTCNaoComputado** `G7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=ROUNDDOWN((ResultadoTotalDiasTCNaoComputado-(ResultadoAnosTCNaoComputado*360))/30){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoTotalCarencia** `K19`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUM(ResultadoCarenciaSimples;TotalAcrescimosCarencia){% endhighlight %}
 
+
+
+
+
+* * *
+
+##### **ResultadoTotalDiasBIAcidentario** `E15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="8"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoTotalDiasBIIntercalado** `E16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="9"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoTotalDiasBINaoIntercalado** `E17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="10"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
 
 
 
@@ -1039,16 +1379,22 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoTotalDiasTCComum** `E6`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=SUM(FILTER(TotalDiasTCDiscriminadoProcessado;FatorConversaoTCDiscriminadoProcessado=1)){% endhighlight %}
+##### **ResultadoTotalDiasTCComum** `E8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
 
+MID(ClassificacaoTCDiscriminado;1;1)="1"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
 
 
 > Alteração para somar apenas os dias, mas não o valor do fator. (Alterado em 20/02/18)
 
 * * *
 
-##### **ResultadoTotalDiasTCComumEspecial** `E8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoTotalDiasTCComumEspecial** `E19`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUM(TotalDiasTCDiscriminadoProcessado;TotalDiasTCAdicionado){% endhighlight %}
 
 
@@ -1057,9 +1403,54 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoTotalDiasTCConvertido** `E10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoTotalDiasTCConvertido** `E21`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUM(TotalDiasConvertidosTCDiscriminadoProcessado;TotalDiasConvertidosTCAdicionado){% endhighlight %}
 
+
+
+
+
+* * *
+
+##### **ResultadoTotalDiasTCDeficienciaGrave** `E14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="5"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoTotalDiasTCDeficienciaLeve** `E12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="7"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoTotalDiasTCDeficienciaModerada** `E13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="6"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
 
 
 
@@ -1084,20 +1475,67 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **ResultadoTotalDiasTCEspecial** `E7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=SUM(FILTER(TotalDiasTCDiscriminadoProcessado;FatorConversaoTCDiscriminadoProcessado<>1)){% endhighlight %}
+##### **ResultadoTotalDiasTCEspecial15** `E9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="4"));0){% endhighlight %}
 
 
 ~~~
-0
+0.###############
 ~~~
 
 
-> Alteração para somar apenas os dias, mas não o valor do fator. (Alterado em 20/02/18)
+
 
 * * *
 
-##### **TotalAcrescimoTempoEspecial** `E9`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **ResultadoTotalDiasTCEspecial20** `E10`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="3"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoTotalDiasTCEspecial25** `E11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="2"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **ResultadoTotalDiasTCNaoComputado** `E7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IFERROR(SUM(FILTER(TotalDiasTCDiscriminadoProcessado;
+
+MID(ClassificacaoTCDiscriminado;1;1)="0"));0){% endhighlight %}
+
+
+~~~
+0.###############
+~~~
+
+
+
+
+* * *
+
+##### **TotalAcrescimoTempoEspecial** `E20`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=(ResultadoTotalDiasTCDiscriminadoConvertido + ResultadoTotalDiasTCAdicionadoConvertido) - (ResultadoTotalDiasTCDiscriminadoComum + ResultadoTotalDiasTCAdicionadoComum){% endhighlight %}
 
 
@@ -1106,7 +1544,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalAcrescimosCarencia** `J8`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalAcrescimosCarencia** `J19`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUM(Acrescimos){% endhighlight %}
 
 
@@ -1115,7 +1553,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalAcrescimosDER** `J16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalAcrescimosDER** `J27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DER;Acrescimos){% endhighlight %}
 
 
@@ -1128,7 +1566,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalAcrescimosDERReafirmada1** `J17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalAcrescimosDERReafirmada1** `J28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada1;Acrescimos);""){% endhighlight %}
 
 
@@ -1141,7 +1579,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalAcrescimosDERReafirmada2** `J18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalAcrescimosDERReafirmada2** `J29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada2;Acrescimos);""){% endhighlight %}
 
 
@@ -1154,7 +1592,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalAcrescimosDPE** `J11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalAcrescimosDPE** `J22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPEMaisUm;Acrescimos){% endhighlight %}
 
 
@@ -1167,7 +1605,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalAcrescimosDPL** `J15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalAcrescimosDPL** `J26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPL;Acrescimos){% endhighlight %}
 
 
@@ -1180,7 +1618,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalCarenciaDER** `K16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalCarenciaDER** `K27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=CarenciaDER+TotalAcrescimosDER{% endhighlight %}
 
 
@@ -1189,33 +1627,25 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalCarenciaDERReafirmada1** `K17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalCarenciaDERReafirmada1** `K28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);CarenciaDERReafirmada1+TotalAcrescimosDERReafirmada1;""){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 > Carência (número de contribuições) apuradas até a segunda data reafirmada (após acréscimos da Lei 11.718/2008)
 
 * * *
 
-##### **TotalCarenciaDERReafirmada2** `K18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalCarenciaDERReafirmada2** `K29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);CarenciaDERReafirmada2+TotalAcrescimosDERReafirmada2;""){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 
 
 * * *
 
-##### **TotalCarenciaDPE** `K11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalCarenciaDPE** `K22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=CarenciaDPE+TotalAcrescimosDPE{% endhighlight %}
 
 
@@ -1224,7 +1654,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalCarenciaDPL** `K15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalCarenciaDPL** `K26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=CarenciaDPL+TotalAcrescimosDPL{% endhighlight %}
 
 
@@ -1233,7 +1663,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalDiasDER** `E16`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalDiasDER** `E27`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<="&DER;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<="&DER;TotalDiasConvertidosTCAdicionado)
 
 {% endhighlight %}
@@ -1244,33 +1674,25 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalDiasDERReafirmada1** `E17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada1;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DERReafirmada1;TotalDiasConvertidosTCAdicionado);""){% endhighlight %}
+##### **TotalDiasDERReafirmada1** `E28`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada1);SUMIF(DataFinalTCDiscriminadoProcessado;"<="&DERReafirmada1;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DERReafirmada1;TotalDiasConvertidosTCAdicionado);""){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 > Tempo de contribuição apurado até segunda data reafirmada (em dias)
 
 * * *
 
-##### **TotalDiasDERReafirmada2** `E18`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DERReafirmada2;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DERReafirmada2;TotalDiasConvertidosTCAdicionado);""){% endhighlight %}
+##### **TotalDiasDERReafirmada2** `E29`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(ISNUMBER(DERReafirmada2);SUMIF(DataFinalTCDiscriminadoProcessado;"<="&DERReafirmada2;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DERReafirmada2;TotalDiasConvertidosTCAdicionado);""){% endhighlight %}
 
-
-~~~
-0.###############
-~~~
 
 
 
 
 * * *
 
-##### **TotalDiasDPE** `E11`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalDiasDPE** `E22`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPEMaisUm;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DPEMaisUm;TotalDiasConvertidosTCAdicionado){% endhighlight %}
 
 
@@ -1279,7 +1701,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalDiasDPL** `E15`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalDiasDPL** `E26`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=SUMIF(DataFinalTCDiscriminadoProcessado;"<"&DPL;TotalDiasConvertidosTCDiscriminadoProcessado)+SUMIF(LimitesTCAdicionado;"<"&DPL;TotalDiasConvertidosTCAdicionado){% endhighlight %}
 
 
@@ -1288,7 +1710,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalDiasFaltantesComPedagio** `E13`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalDiasFaltantesComPedagio** `E24`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=((IF(Sexo="Mulher";25;30)*360)+TotalDiasPedagio)-TotalDiasDPE{% endhighlight %}
 
 
@@ -1297,7 +1719,7 @@ Adicionado critério para aposentadoria por idade (alterado em 21/10/2017)
 
 * * *
 
-##### **TotalDiasPedagio** `E12`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+##### **TotalDiasPedagio** `E23`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=((IF(Sexo="Mulher";25;30)*360)-TotalDiasDPE)*0,4{% endhighlight %}
 
 

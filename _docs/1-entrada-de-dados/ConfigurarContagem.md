@@ -116,6 +116,31 @@ VALUE_IN_LIST Sim,Não
 
 * * *
 
+##### **MarcoCarencia** `G14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+{% highlight erlang %}=IF(MarcoCarenciaModificado="";IF(Especie=41;OpcoesCarencia!A1;OpcoesCarencia!A2);MarcoCarenciaModificado){% endhighlight %}
+
+
+
+
+
+* * *
+
+##### **MarcoCarenciaModificado** `H14`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
+
+
+~~~
+0.###############
+~~~
+
+
+~~~
+VALUE_IN_RANGE OpcoesCarencia!A:A
+~~~
+
+
+
+* * *
+
 ##### **MarcosTemporais** `D6:D17`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
 {% highlight erlang %}=DPE+1
 =DER+1

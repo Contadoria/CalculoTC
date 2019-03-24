@@ -5,7 +5,7 @@ order: 0
 ---
 
 ##### **EstatisticaUrl** `D7`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=HYPERLINK("https://script.google.com/macros/s/AKfycbz-yl2lxDMQ3yai5VIayuyospcF6FArZ81d6p8KtR_UhWOcRNc/exec"; "Teste_Estatistica (ESTATISTICA)"){% endhighlight %}
+{% highlight erlang %}=HYPERLINK("https://script.google.com/macros/s/AKfycbx2c9KODzy6ANTSTlB5jKy0W2w1rZJLDCIs4Btsu3fqllbIYFCK/exec"; "Cópia de Estatística Template"){% endhighlight %}
 
 
 ~~~
@@ -118,7 +118,10 @@ VALUE_IN_RANGE ListaJuizos!C:C
 * * *
 
 ##### **UrlPlanilha** `D4`{: style="background-color: lightgrey; color: black; border-radius: 5px; padding:3px;"}
-{% highlight erlang %}=jef_URL(Demonstrativo!C16){% endhighlight %}
 
+
+~~~
+0.###############
+~~~
 
 
